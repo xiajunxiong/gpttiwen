@@ -1,0 +1,12 @@
+Config.emperor_portrait_auto={
+    other={
+        {
+            special_task_id=65410,
+            last_task_id=65412,
+            npc_id=66307,
+            special_talk=8400,
+            fail_talk=8404,
+            restart_talk=8403
+        }
+    }
+}

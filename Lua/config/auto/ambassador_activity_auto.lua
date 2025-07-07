@@ -1,0 +1,37 @@
+local _itemlist={
+    i_27541_1_1={
+        item_id=27541,
+        num=1,
+        is_bind=1
+    },
+    i_26813_1_1={
+        item_id=26813,
+        num=1,
+        is_bind=1
+    },
+    i_25505_1_1={
+        item_id=25505,
+        num=1,
+        is_bind=1
+    }
+}
+Config.ambassador_activity_auto={
+    basis_configuration={
+        {
+            seq=0,
+            act_type=2109,
+            desc="特殊事件可获得增益/减益状态等奖励\n战斗仅可挑战一次，不可重复挑战\n每日进入次数不限，拥有道具即可进入",
+            reward_item={
+                [0]=_itemlist.i_27541_1_1,
+                [1]=_itemlist.i_26813_1_1,
+                [2]=_itemlist.i_25505_1_1
+            }
+        }
+    },
+    other={
+        {
+            npc_id=68015,
+            talk="欢迎少侠来到玄都，可在我处参加各大节日活动哦！"
+        }
+    }
+}

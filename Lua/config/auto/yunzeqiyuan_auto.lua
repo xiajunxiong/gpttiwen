@@ -1,0 +1,65 @@
+local _default_val={
+    reward={
+        section_start=1,
+        section_end=0
+    }
+}
+local _itemlist={
+    i_27847_2_1={
+        item_id=27847,
+        num=2,
+        is_bind=1
+    },
+    i_27403_1_1={
+        item_id=27403,
+        num=1,
+        is_bind=1
+    },
+    i_24557_1_1={
+        item_id=24557,
+        num=1,
+        is_bind=1
+    },
+    i_29017_1_1={
+        item_id=29017,
+        num=1,
+        is_bind=1
+    },
+    i_27838_1_1={
+        item_id=27838,
+        num=1,
+        is_bind=1
+    }
+}
+Config.yunzeqiyuan_auto={
+    reward={
+        {
+            seq=0,
+            reward_item=_itemlist.i_27847_2_1
+        },
+        {
+            seq=1,
+            reward_item=_itemlist.i_27403_1_1
+        },
+        {
+            seq=2,
+            reward_item=_itemlist.i_24557_1_1
+        },
+        {
+            seq=3,
+            reward_item=_itemlist.i_29017_1_1
+        },
+        {
+            seq=4,
+            reward_item=_itemlist.i_27838_1_1
+        }
+    },
+    other={
+        {
+            reward_choice=3,
+            reward_get=1,
+            desc="锁定三样奖励，每八个小时整点在线即可概率抽取心愿奖励！"
+        }
+    }
+}
+SetConfigDefaultVal(Config.yunzeqiyuan_auto,_default_val,nil,nil,nil)

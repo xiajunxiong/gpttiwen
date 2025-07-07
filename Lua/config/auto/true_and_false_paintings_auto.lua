@@ -1,0 +1,13 @@
+Config.true_and_false_paintings_auto={
+    other={
+        {
+            special_task_id=65210,
+            last_task_id=65212,
+            npc_id=59061,
+            special_bubble=132,
+            special_talk=72290,
+            fail_talk=72291,
+            restart_talk=72292
+        }
+    }
+}

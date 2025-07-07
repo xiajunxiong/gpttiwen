@@ -1,0 +1,31 @@
+Config.scenes = Config.scenes or {}
+Config.scenes[962] = 
+{
+	id = 962,
+	name = "遗忘之海",
+	mapid = 163,
+	scene_type = 4,
+	min_level = 0,
+	max_level = 0,
+	entry_point = 
+	{
+		x = 180.4,
+		y = 152.7,
+		z = 158.5941
+	},
+	npcs = 
+	{
+	},
+	doors = 
+	{
+	},
+	monsters = 
+	{
+	},
+	gathers = 
+	{
+	},
+	decorations = 
+	{
+	}
+}

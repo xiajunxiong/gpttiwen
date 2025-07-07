@@ -1,0 +1,66 @@
+local _default_val={
+    adventure_gift={
+        parameter1=0,
+        type_money=0,
+        price=480,
+        price_old=600
+    }
+}
+local _itemlist={
+    i_28030_1_1={
+        item_id=28030,
+        num=1,
+        is_bind=1
+    },
+    i_28031_1_1={
+        item_id=28031,
+        num=1,
+        is_bind=1
+    },
+    i_28034_1_1={
+        item_id=28034,
+        num=1,
+        is_bind=1
+    },
+    i_28035_1_1={
+        item_id=28035,
+        num=1,
+        is_bind=1
+    }
+}
+Config.adventure_gift_activity_auto={
+    other={
+        {
+            time=1800
+        }
+    },
+    adventure_gift={
+        {
+            type=0,
+            parameter2=130,
+            item=_itemlist.i_28030_1_1
+        },
+        {
+            type=1,
+            parameter2=140,
+            item=_itemlist.i_28031_1_1
+        },
+        {
+            type=2,
+            parameter1=1,
+            parameter2=60,
+            item=_itemlist.i_28034_1_1,
+            price=580,
+            price_old=1066
+        },
+        {
+            type=3,
+            parameter1=1,
+            parameter2=70,
+            item=_itemlist.i_28035_1_1,
+            price=580,
+            price_old=1066
+        }
+    }
+}
+SetConfigDefaultVal(Config.adventure_gift_activity_auto,_default_val,nil,nil,nil)

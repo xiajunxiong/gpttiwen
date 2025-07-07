@@ -1,0 +1,57 @@
+local _default_val={
+    store_config={
+        is_bind=1,
+        num=1,
+        price=300,
+        conver_item_id=26230,
+        limit_convert_count=0,
+        is_show=1,
+        open_day=0,
+        discount=0,
+        is_remind=0
+    }
+}
+Config.lovers_market_auto={
+    other={
+        {
+            play_coin=26230
+        }
+    },
+    store_config={
+        {
+            seq=0,
+            item_id=29034,
+            price=35,
+            sort=0
+        },
+        {
+            seq=1,
+            item_id=24557,
+            price=70,
+            sort=1
+        },
+        {
+            seq=2,
+            item_id=27838,
+            price=100,
+            sort=2
+        },
+        {
+            seq=3,
+            item_id=27540,
+            price=120,
+            sort=3
+        },
+        {
+            seq=4,
+            item_id=24518,
+            sort=5
+        },
+        {
+            seq=5,
+            item_id=31321,
+            sort=4
+        }
+    }
+}
+SetConfigDefaultVal(Config.lovers_market_auto,_default_val,nil,nil,nil)

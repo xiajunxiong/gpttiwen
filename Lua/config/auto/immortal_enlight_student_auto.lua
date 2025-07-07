@@ -1,0 +1,24 @@
+Config.immortal_enlight_student_auto={
+    answer={
+        {
+            sn=0,
+            answer_number=3152
+        },
+        {
+            sn=1,
+            answer_number=2154
+        },
+        {
+            sn=2,
+            answer_number=1485
+        },
+        {
+            sn=3,
+            answer_number=1649
+        },
+        {
+            sn=4,
+            answer_number=1458
+        }
+    }
+}

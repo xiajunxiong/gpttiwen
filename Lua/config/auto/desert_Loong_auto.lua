@@ -1,0 +1,13 @@
+Config.desert_Loong_auto={
+    other={
+        {
+            special_task_id=65390,
+            last_task_id=65392,
+            npc_id=66304,
+            special_bubble=138,
+            special_talk=8100,
+            fail_talk=8104,
+            restart_talk=8103
+        }
+    }
+}

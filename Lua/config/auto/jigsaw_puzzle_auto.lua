@@ -1,0 +1,12 @@
+Config.jigsaw_puzzle_auto={
+    other={
+        {
+            special_task_id=65380,
+            last_task_id=65382,
+            npc_id=66305,
+            special_talk=8200,
+            fail_talk=8204,
+            restart_talk=8203
+        }
+    }
+}

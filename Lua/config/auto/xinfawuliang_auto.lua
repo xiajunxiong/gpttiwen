@@ -1,0 +1,47 @@
+local _itemlist={
+    i_28618_1_1={
+        item_id=28618,
+        num=1,
+        is_bind=1
+    },
+    i_25566_1_1={
+        item_id=25566,
+        num=1,
+        is_bind=1
+    },
+    i_25607_1_1={
+        item_id=25607,
+        num=1,
+        is_bind=1
+    },
+    i_26073_1000_1={
+        item_id=26073,
+        num=1000,
+        is_bind=1
+    },
+    i_24326_30_1={
+        item_id=24326,
+        num=30,
+        is_bind=1
+    }
+}
+Config.xinfawuliang_auto={
+    gift_configure={
+        {
+            type=0,
+            section_start=1,
+            section_end=0,
+            seq=0,
+            reward_item={
+                [0]=_itemlist.i_28618_1_1,
+                [1]=_itemlist.i_25566_1_1,
+                [2]=_itemlist.i_25607_1_1,
+                [3]=_itemlist.i_26073_1000_1,
+                [4]=_itemlist.i_24326_30_1
+            },
+            acc_price=80000,
+            gift_item=_itemlist.i_28618_1_1,
+            is_borcast=1
+        }
+    }
+}

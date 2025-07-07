@@ -1,0 +1,49 @@
+local _default_val={
+    lattice={
+        initial_num=0
+    }
+}
+Config.sudoku_book_auto={
+    lattice={
+        {
+            seq=1
+        },
+        {
+            seq=2
+        },
+        {
+            seq=3,
+            initial_num=4
+        },
+        {
+            seq=4
+        },
+        {
+            seq=5,
+            initial_num=5
+        },
+        {
+            seq=6
+        },
+        {
+            seq=7
+        },
+        {
+            seq=8,
+            initial_num=1
+        },
+        {
+            seq=9
+        }
+    },
+    other={
+        {
+            task_id=65001,
+            fail_talk=72005,
+            restart_talk=72006,
+            npc_id=59000,
+            bubble_id=115
+        }
+    }
+}
+SetConfigDefaultVal(Config.sudoku_book_auto,_default_val,nil,nil,nil)

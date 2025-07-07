@@ -1,0 +1,63 @@
+local _default_val={
+    reward_rate={
+        section_start=1,
+        section_end=0
+    }
+}
+local _itemlist={
+    i_26362_1_1={
+        item_id=26362,
+        num=1,
+        is_bind=1
+    },
+    i_28516_1_1={
+        item_id=28516,
+        num=1,
+        is_bind=1
+    },
+    i_24557_1_1={
+        item_id=24557,
+        num=1,
+        is_bind=1
+    },
+    i_27838_1_1={
+        item_id=27838,
+        num=1,
+        is_bind=1
+    }
+}
+Config.bozhongyouli_auto={
+    reward={
+        {
+            section_start=1,
+            section_end=0,
+            reward_item={
+                [0]=_itemlist.i_26362_1_1
+            }
+        }
+    },
+    reward_rate={
+        {
+            seq=1,
+            reward_item=_itemlist.i_28516_1_1
+        },
+        {
+            seq=2,
+            reward_item=_itemlist.i_24557_1_1
+        },
+        {
+            seq=3,
+            reward_item=_itemlist.i_27838_1_1
+        }
+    },
+    other={
+        {
+            frequency1=4,
+            frequency2=7200,
+            state1=10800,
+            state2=21600,
+            state3=28800
+        }
+    }
+}
+SetConfigDefaultVal(Config.bozhongyouli_auto,_default_val,nil,nil,nil)

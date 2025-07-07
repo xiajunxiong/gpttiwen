@@ -1,0 +1,58 @@
+local _default_val={
+    gift_configure={
+        section_start=1,
+        section_end=0,
+        price_type=3,
+        value=98,
+        price=300
+    }
+}
+local _itemlist={
+    i_24610_1_1={
+        item_id=24610,
+        num=1,
+        is_bind=1
+    },
+    i_24810_1_1={
+        item_id=24810,
+        num=1,
+        is_bind=1
+    },
+    i_28893_1_1={
+        item_id=28893,
+        num=1,
+        is_bind=1
+    }
+}
+Config.qingyuanshizhuang_auto={
+    gift_configure={
+        {
+            type=0,
+            seq=0,
+            reward_item=_itemlist.i_24610_1_1,
+            item_desc="\t\t稀世时装·外形飘逸，缀着朵朵鲜花，伴着飞\n翔的小鸟，轻舞的花瓣，令人见之难忘，是您\n与情缘之间感情的见证"
+        },
+        {
+            type=1,
+            seq=1,
+            reward_item=_itemlist.i_24810_1_1,
+            item_desc="\t\t稀世武器·外形飘逸，配以鲜花装饰，伴着飞\n舞的花瓣，与佳人·恋时装相得益彰，是您与\n情缘之间感情的见证"
+        },
+        {
+            type=2,
+            seq=2,
+            reward_item=_itemlist.i_28893_1_1,
+            price_type=16,
+            value=6000,
+            price=520,
+            item_desc="\t\t情比金坚尾标，见证诸位天定良缘，情深一片\n使用即可获得情比金坚尾标，让世人见证您\n与情人之间的缘分"
+        }
+    },
+    other={
+        {
+            buy_times=1,
+            cfg_ver=2
+        }
+    }
+}
+SetConfigDefaultVal(Config.qingyuanshizhuang_auto,_default_val,nil,nil,nil)

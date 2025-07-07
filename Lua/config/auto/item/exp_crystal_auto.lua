@@ -1,0 +1,33 @@
+Config.exp_crystal_auto={
+    [40040]={
+        id=40040,
+        name="打卡水晶",
+        item_type=22,
+        show_type=3,
+        bag_type=0,
+        bag_classification=0,
+        color=4,
+        isbind=1,
+        candiscard=0,
+        sellprice=0,
+        pile_limit=1,
+        is_can_use=1,
+        time_length=0,
+        invalid_time=-1,
+        limit_prof=-1,
+        limit_prof_up=1,
+        limit_level=1,
+        limit_drop=0,
+        item_level="开启后每场战斗胜利获得双倍经验，每天恢复360次，最多累积1080点，每次消耗1点",
+        description="打卡水晶",
+        type_desc=40000,
+        icon_id=28999,
+        item_trade_money_type=0,
+        trade_need_announcement=0,
+        min_price=0,
+        max_price=100,
+        group=1,
+        search_type=195,
+        recommended_price=0
+    }
+}

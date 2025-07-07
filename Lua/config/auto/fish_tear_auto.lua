@@ -1,0 +1,47 @@
+local _default_val={
+    question={
+        answer_id=1
+    }
+}
+Config.fish_tear_auto={
+    question={
+        {
+            question_id=1,
+            order=1,
+            question="“在修行的路上，总会遇到陷入困境的人，搬开别人路上的绊脚石，有时恰能成就自己”其中的道理你认为如何？",
+            anwser_1="帮助别人，也就帮助了自己",
+            anwser_2="帮助了自己就是帮助了别人",
+            anwser_3="真诚的帮助最终都是为了补偿",
+            anwser_4="帮助别人对自己毫无用处"
+        },
+        {
+            question_id=2,
+            order=2,
+            question="“处事让一步为高，退步即为进步的根本，待人宽一分则福，利人实利己的根基。”这句话你悟到了什么？",
+            anwser_1="与人方便与己方便，与人为善与己为善",
+            anwser_2="为人处事要以退步为根本，凡是退步的事都值得提倡",
+            anwser_3="待人接物要本着以方便自己，对自己有利为目的",
+            anwser_4="为人处事、待人接物都必须从自己的利益出发"
+        },
+        {
+            question_id=3,
+            order=3,
+            answer_id=3,
+            question="在一个暴风雨的夜晚，你骑着马，路上遇到四个赶路人在路边等雨停，但你只能带上一个人，你会带上谁？\n这四个赶路人分别是：",
+            anwser_1="一个你心爱的人，做梦都想和他/她在一起",
+            anwser_2="一个曾经救过你的樵夫，你一直想报答他",
+            anwser_3="一个要临死的老人，需要马上去医馆",
+            anwser_4="一个富甲一方的商人，与他交识或许能获得一笔财富"
+        }
+    },
+    other={
+        {
+            question_num=3,
+            button_xyz="239|201",
+            button_r=10,
+            success=5005,
+            fail=5006
+        }
+    }
+}
+SetConfigDefaultVal(Config.fish_tear_auto,_default_val,nil,nil,nil)

@@ -1,0 +1,25 @@
+local _default_val={
+    deal_discount={
+        reduce_discount=20
+    }
+}
+Config.trade_discount_auto={
+    deal_discount={
+        {
+            seq=0,
+            section_start=1,
+            section_end=3
+        },
+        {
+            seq=1,
+            section_start=4,
+            section_end=6
+        },
+        {
+            seq=2,
+            section_start=7,
+            section_end=0
+        }
+    }
+}
+SetConfigDefaultVal(Config.trade_discount_auto,_default_val,nil,nil,nil)

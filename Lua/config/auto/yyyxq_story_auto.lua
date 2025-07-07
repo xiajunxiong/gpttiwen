@@ -1,0 +1,12 @@
+Config.yyyxq_story_auto={
+    other={
+        {
+            yjcnpc_ID=59027,
+            scene_ID=108,
+            x=46,
+            y=430,
+            dir_y=180,
+            npc_id_1=901
+        }
+    }
+}

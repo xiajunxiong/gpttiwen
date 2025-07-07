@@ -1,0 +1,27 @@
+local _itemlist={
+    i_50185_1_1={
+        item_id=50185,
+        num=1,
+        is_bind=1
+    }
+}
+Config.lucky_cow_auto={
+    set_cow={
+        {
+            type=0,
+            original_price=8888,
+            current_price=3499,
+            discount=0.4,
+            buy_num=5,
+            reward_item={
+                [0]=_itemlist.i_50185_1_1
+            },
+            return_item=20000,
+            start_time=0,
+            until_time=45,
+            known_time=1,
+            show_time=26,
+            timestamp=2398348800
+        }
+    }
+}

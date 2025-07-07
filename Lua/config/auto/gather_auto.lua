@@ -1,0 +1,35 @@
+Config.gather_auto={
+    gather_list={
+        [1]={
+            id=1,
+            name="彩晶石",
+            show_name="彩晶石",
+            resid=8,
+            scale=1,
+            visual=1,
+            shine=1,
+            effect_id=""
+        },
+        [101]={
+            id=101,
+            name="灵草",
+            show_name="人参",
+            resid=1,
+            scale=1,
+            visual=1,
+            shine=1,
+            effect_id=""
+        },
+        [130]={
+            id=130,
+            name="桂花酒",
+            show_name="桂花酒",
+            resid=14,
+            scale=1.2,
+            visual=1,
+            shine=1,
+            effect_id=""
+        },
+
+    }
+}

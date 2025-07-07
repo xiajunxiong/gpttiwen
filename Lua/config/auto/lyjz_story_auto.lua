@@ -1,0 +1,18 @@
+Config.lyjz_story_auto={
+    other={
+        {
+            special_task_id=65051,
+            last_task_id=65052,
+            special_talk=72050,
+            restart_talk=72052,
+            task_item_id=27559,
+            yjcnpc_ID=59009,
+            scene_ID=163,
+            x=18,
+            y=280,
+            dir_y=180,
+            npc_id_1=580,
+            special_bubble_1=108
+        }
+    }
+}

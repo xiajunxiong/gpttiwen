@@ -1,0 +1,44 @@
+local _default_val={
+    seek_pets={
+        grade_start=1,
+        grade_end=0
+    }
+}
+local _itemlist={
+    i_28576_1_1={
+        item_id=28576,
+        num=1,
+        is_bind=1
+    },
+    i_28577_1_1={
+        item_id=28577,
+        num=1,
+        is_bind=1
+    }
+}
+Config.joy_seeks_favors_auto={
+    other={
+        {
+            start_time1=1200,
+            end_time1=1300,
+            start_time2=1900,
+            end_time2=2000,
+            dr_time=3600
+        }
+    },
+    seek_pets={
+        {
+            seq=0,
+            seq1=0,
+            victory_or_defeat=0,
+            reward_item=_itemlist.i_28576_1_1
+        },
+        {
+            seq=1,
+            seq1=1,
+            victory_or_defeat=1,
+            reward_item=_itemlist.i_28577_1_1
+        }
+    }
+}
+SetConfigDefaultVal(Config.joy_seeks_favors_auto,_default_val,nil,nil,nil)

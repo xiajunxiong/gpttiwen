@@ -1,0 +1,38 @@
+local _itemlist={
+    i_26363_1_1={
+        item_id=26363,
+        num=1,
+        is_bind=1
+    },
+    i_29017_1_1={
+        item_id=29017,
+        num=1,
+        is_bind=1
+    },
+    i_28516_1_1={
+        item_id=28516,
+        num=1,
+        is_bind=1
+    }
+}
+Config.miaobishenghua_auto={
+    reward={
+        {
+            section_start=1,
+            section_end=0,
+            reward_item={
+                [0]=_itemlist.i_26363_1_1,
+                [1]=_itemlist.i_29017_1_1,
+                [2]=_itemlist.i_28516_1_1
+            }
+        }
+    },
+    other={
+        {
+            frequency=1,
+            item_id=26364,
+            open_panel=21001,
+            frequency_day=3
+        }
+    }
+}

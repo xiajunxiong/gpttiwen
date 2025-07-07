@@ -1,0 +1,27 @@
+local _itemlist={
+    i_50098_1_1={
+        item_id=50098,
+        num=1,
+        is_bind=1
+    },
+    i_25959_1_1={
+        item_id=25959,
+        num=1,
+        is_bind=1
+    }
+}
+Config.xinfulingchong_auto={
+    reward_bug={
+        {
+            reward_item={
+                [0]=_itemlist.i_50098_1_1,
+                [1]=_itemlist.i_25959_1_1
+            },
+            price=980,
+            price_type=-1,
+            cfg_or=1,
+            cfg_ver=1,
+            describe="原价198元\n限时<color=#ff3e3e>5折</color>"
+        }
+    }
+}

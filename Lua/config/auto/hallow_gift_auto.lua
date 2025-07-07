@@ -1,0 +1,1 @@
+Config.hallow_gift_auto={}

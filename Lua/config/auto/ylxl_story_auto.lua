@@ -1,0 +1,32 @@
+Config.ylxl_story_auto={
+    other={
+        {
+            special_task_id=65061,
+            last_task_id=65063,
+            restart_talk=72062,
+            npc_id_1=59055,
+            special_bubble_1=109,
+            npc_id_2=59056,
+            special_bubble_2=109,
+            star_radius=10,
+            bubble_reset_time=900
+        }
+    },
+    grade={
+        {
+            gradetime_min=0,
+            gradetime_max=60,
+            grade_shaow="grade1"
+        },
+        {
+            gradetime_min=61,
+            gradetime_max=120,
+            grade_shaow="grade2"
+        },
+        {
+            gradetime_min=120,
+            gradetime_max=-1,
+            grade_shaow="grade3"
+        }
+    }
+}

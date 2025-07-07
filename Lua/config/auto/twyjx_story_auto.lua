@@ -1,0 +1,16 @@
+Config.twyjx_story_auto={
+    other={
+        {
+            special_task_id=65071,
+            last_task_id=65075,
+            restart_talk=72074,
+            npc_id=40526,
+            special_bubble_1=117,
+            special_bubble_2=118,
+            monster_group_id=27024,
+            boss_id=53037,
+            spy_npc_seq=59021,
+            npc_seq=59019
+        }
+    }
+}

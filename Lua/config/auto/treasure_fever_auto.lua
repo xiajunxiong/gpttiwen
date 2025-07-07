@@ -1,0 +1,15 @@
+Config.treasure_fever_auto={
+    other={
+        {
+            special_task_id=65180,
+            last_task_id=65186,
+            npc_id=59059,
+            special_bubble=129,
+            special_talk=72261,
+            fail_talk=72262,
+            restart_talk=72263,
+            button_xyz="35|37",
+            button_r=10
+        }
+    }
+}

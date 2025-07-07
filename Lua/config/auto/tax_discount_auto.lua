@@ -1,0 +1,25 @@
+local _default_val={
+    tax_rate_discount={
+        reduce_tax_rate=200
+    }
+}
+Config.tax_discount_auto={
+    tax_rate_discount={
+        {
+            seq=0,
+            section_start=1,
+            section_end=3
+        },
+        {
+            seq=1,
+            section_start=4,
+            section_end=6
+        },
+        {
+            seq=2,
+            section_start=7,
+            section_end=0
+        }
+    }
+}
+SetConfigDefaultVal(Config.tax_discount_auto,_default_val,nil,nil,nil)

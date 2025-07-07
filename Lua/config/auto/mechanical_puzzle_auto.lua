@@ -1,0 +1,13 @@
+Config.mechanical_puzzle_auto={
+    other={
+        {
+            special_task_id=65220,
+            last_task_id=65222,
+            npc_id=59067,
+            special_bubble=129,
+            special_talk=72310,
+            fail_talk=72312,
+            restart_talk=72314
+        }
+    }
+}

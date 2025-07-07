@@ -1,0 +1,14 @@
+Config.exp_crystal_cfg_auto={
+    exp_crystal={
+        {
+            id=40040,
+            item_name_crystal="打卡水晶",
+            every_reply_crystal=0,
+            max_crystal=1080,
+            expend_num=1,
+            is_open=0,
+            bonus_exp_num_percentage=0,
+            desc="开启后每场战斗胜利获得双倍经验，每天恢复360次，最多累积1080点，每次消耗1点"
+        }
+    }
+}

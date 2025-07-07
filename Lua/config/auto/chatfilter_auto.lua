@@ -1,0 +1,12 @@
+Config.chatfilter_auto={
+    title_1={
+        {
+            seq="dev",
+            table="title_12"
+        },
+        {
+            seq="yy2",
+            table="title_11"
+        }
+    }
+}

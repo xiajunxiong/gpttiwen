@@ -1,0 +1,66 @@
+local _default_val={
+    gift_configure={
+        seq=0,
+        level_down=40,
+        level_up=200,
+        value=648
+    }
+}
+local _itemlist={
+    i_28608_1_1={
+        item_id=28608,
+        num=1,
+        is_bind=1
+    },
+    i_26812_1_1={
+        item_id=26812,
+        num=1,
+        is_bind=1
+    },
+    i_27402_1_1={
+        item_id=27402,
+        num=1,
+        is_bind=1
+    }
+}
+Config.buy_one_gold_auto={
+    gift_configure={
+        {
+            type=0,
+            section_start=1,
+            section_end=7,
+            reward_item={
+                [0]=_itemlist.i_28608_1_1,
+                [1]=_itemlist.i_26812_1_1,
+                [2]=_itemlist.i_27402_1_1
+            }
+        },
+        {
+            type=1,
+            section_start=8,
+            section_end=14,
+            reward_item={
+                [0]=_itemlist.i_28608_1_1,
+                [1]=_itemlist.i_26812_1_1,
+                [2]=_itemlist.i_27402_1_1
+            }
+        },
+        {
+            type=2,
+            section_start=15,
+            section_end=0,
+            reward_item={
+                [0]=_itemlist.i_28608_1_1,
+                [1]=_itemlist.i_26812_1_1,
+                [2]=_itemlist.i_27402_1_1
+            }
+        }
+    },
+    other={
+        {
+            cfg_ver=1,
+            buy_money=10
+        }
+    }
+}
+SetConfigDefaultVal(Config.buy_one_gold_auto,_default_val,nil,nil,nil)

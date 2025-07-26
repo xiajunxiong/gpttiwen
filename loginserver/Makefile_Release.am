@@ -1,0 +1,20 @@
+AUTOMAKE_OPTIONS = foreign
+
+noinst_PROGRAMS = EXEloginserver_release
+
+#release版本
+CXXFLAGS = -O0 -g -Wall
+
+#debug版本
+#CXXFLAGS = -O0 -g3 -Wall -D_DEBUG
+
+INCLUDES = -I$(INCLUDE_PATH)/ -I$(LIB_LINUX_PATH)/
+
+ADDCPP = 
+ADDDIRS = ./servercommon/
+
+EXEloginserver_release_SOURCES = rmiclient/rmidaroleclient.cpp rmiclient/rmidaloginclient.cpp server/loginserverlogin.cpp server/wallowtimer.cpp server/threadrecorder.cpp server/platform/platform.cpp server/platform/platform91wan.cpp server/protocal/msgcpp.cpp server/loginserver.cpp server/loginmempool.cpp server/usermanager.cpp server/roleinitattr.cpp server/loginserverregister.cpp server/gameserver.cpp server/loginlog.cpp engineadapter.cpp internalcomm.cpp loginservermodule.cpp main.cpp .././servercommon/struct/posthouseparam.cpp .././servercommon/struct/friendparam.cpp .././servercommon/struct/skilllistparam.cpp .././servercommon/struct/taskitemparam.cpp .././servercommon/struct/equipmentparam.cpp .././servercommon/struct/petparam.cpp .././servercommon/struct/businessparam.cpp .././servercommon/struct/roleinitparam.cpp .././servercommon/struct/mentalitylistparam.cpp .././servercommon/struct/knapsackparam.cpp .././servercommon/struct/presentparam.cpp .././servercommon/struct/hotkeylistparam.cpp .././servercommon/struct/system/publicnoticelist.cpp .././servercommon/struct/system/cmdlist.cpp .././servercommon/struct/enemyparam.cpp .././servercommon/struct/taskparam.cpp .././servercommon/struct/roleinfolist.cpp .././servercommon/struct/army/armyinitparam.cpp .././servercommon/struct/army/armyallstruct.cpp .././servercommon/struct/army/countryofficialparam.cpp .././servercommon/struct/army/cityinfolist.cpp .././servercommon/struct/army/armyrelationlist.cpp .././servercommon/struct/army/cityparam.cpp .././servercommon/struct/army/armyapplylist.cpp .././servercommon/struct/army/warlist.cpp .././servercommon/struct/army/armymemberlist.cpp .././servercommon/struct/army/initcountryparam.cpp .././servercommon/struct/army/countryparam.cpp .././servercommon/serverconfig/serverconfigpool.cpp .././servercommon/serverconfig/configstruct.cpp .././servercommon/string/gamestring.cpp .././servercommon/darmi/rmisystemclient.cpp .././servercommon/serverclmempool.cpp .././servercommon/servercommon.cpp
+
+EXEloginserver_release_LDADD = $(LIB_LINUX_PATH)/libgameserver.a $(LIB_LINUX_PATH)/libcommon.a $(LIB_LINUX_PATH)/libutility.a 
+
+EXEloginserver_release_LDFLAGS = -L$(LIB_LINUX_PATH)/ -lpthread -lrt  -llog -lconfig  -lnetwork -lrmi

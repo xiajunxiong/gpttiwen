@@ -1,0 +1,211 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{7D33AE01-C451-423C-855B-A380695D5BB0}</ProjectGuid>
+    <RootNamespace>test</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>14.0.25431.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+    <ExternalIncludePath>E:\baidunetdiskdownload\万灵山海之境神龙版\全套源码\shenlong\代金券万灵神龙\server\lib;$(ExternalIncludePath)</ExternalIncludePath>
+    <LibraryPath>E:\baidunetdiskdownload\万灵山海之境神龙版\全套源码\shenlong\代金券万灵神龙\server\lib\dll_2015;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>../../include;..;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <EnableParallelCodeGeneration>true</EnableParallelCodeGeneration>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>gameserver.lib;common.lib;utility.lib;log.lib;network.lib;config.lib;rmi.lib;libprotobuf.lib;libprotobuf-lite.lib;libprotoc.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>../../lib/debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <ImportLibrary />
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>../../include;..;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>gameserver.lib;common.lib;utility.lib;log.lib;network.lib;config.lib;rmi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>../../lib/release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\servercommon\darmi\rmisystemclient.cpp" />
+    <ClCompile Include="..\servercommon\namefilter.cpp" />
+    <ClCompile Include="..\servercommon\roleattrvermanager\roleattrvermanager.cpp" />
+    <ClCompile Include="..\servercommon\servercommon.cpp" />
+    <ClCompile Include="..\servercommon\serverconfig\appearanceconfig.cpp" />
+    <ClCompile Include="..\servercommon\serverconfig\configstruct.cpp" />
+    <ClCompile Include="..\servercommon\serverconfig\localconfig.cpp" />
+    <ClCompile Include="..\servercommon\serverconfig\nameconfig.cpp" />
+    <ClCompile Include="..\servercommon\serverconfig\openserverconfig.cpp" />
+    <ClCompile Include="..\servercommon\serverconfig\serverconfigpool.cpp" />
+    <ClCompile Include="..\servercommon\struct\global\trademarketparam.cpp" />
+    <ClCompile Include="..\servercommon\struct\roleinfolist.cpp" />
+    <ClCompile Include="..\servercommon\struct\roleinitparam.cpp" />
+    <ClCompile Include="..\servercommon\struct\system\cmdlist.cpp" />
+    <ClCompile Include="..\servercommon\struct\system\cmdresult.cpp" />
+    <ClCompile Include="..\servercommon\struct\system\publicnoticelist.cpp" />
+    <ClCompile Include="..\servercommon\tinyxml\tinyxml2.cpp" />
+    <ClCompile Include="..\servercommon\tinyxml\tinyxml_adapter.cpp" />
+    <ClCompile Include="config\loginconfig.cpp" />
+    <ClCompile Include="config\reloadconfigmanager.cpp" />
+    <ClCompile Include="dbsessionreconnector.cpp" />
+    <ClCompile Include="engineadapter.cpp" />
+    <ClCompile Include="internalcomm.cpp" />
+    <ClCompile Include="loginservermodule.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="randnamemanager\randnamemanager.cpp" />
+    <ClCompile Include="rmiclient\rmidaloginclient.cpp" />
+    <ClCompile Include="rmiclient\rmidaroleclient.cpp" />
+    <ClCompile Include="server\gameserver.cpp" />
+    <ClCompile Include="server\iplimit.cpp" />
+    <ClCompile Include="server\loginlog.cpp" />
+    <ClCompile Include="server\loginmanager\loginmanager.cpp" />
+    <ClCompile Include="server\loginmempool.cpp" />
+    <ClCompile Include="server\loginserver.cpp" />
+    <ClCompile Include="server\loginserverlogin.cpp" />
+    <ClCompile Include="server\loginserverregister.cpp" />
+    <ClCompile Include="server\loginusertrace.cpp" />
+    <ClCompile Include="server\platform\platform.cpp" />
+    <ClCompile Include="server\platform\platform336.cpp" />
+    <ClCompile Include="server\platform\platform360.cpp" />
+    <ClCompile Include="server\platform\platform4399.cpp" />
+    <ClCompile Include="server\platform\platform91wan.cpp" />
+    <ClCompile Include="server\platform\platformasqjh.cpp" />
+    <ClCompile Include="server\platform\PlatformMIX.cpp" />
+    <ClCompile Include="server\platform\platformyujun.cpp" />
+    <ClCompile Include="server\protocal\msgcpp.cpp" />
+    <ClCompile Include="server\roleinitattr.cpp" />
+    <ClCompile Include="server\spidconfig.cpp" />
+    <ClCompile Include="server\story\story.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\servercommon\darmi\rmisystemclient.h" />
+    <ClInclude Include="..\servercommon\dbhandler.h" />
+    <ClInclude Include="..\servercommon\internalprotocal\lglobalprotocal.h" />
+    <ClInclude Include="..\servercommon\internalprotocal\lgprotocal.h" />
+    <ClInclude Include="..\servercommon\internalprotocal\lwprotocal.h" />
+    <ClInclude Include="..\servercommon\namefilter.hpp" />
+    <ClInclude Include="..\servercommon\roleattrvermanager\roleattrvermanager.h" />
+    <ClInclude Include="..\servercommon\servercommon.h" />
+    <ClInclude Include="..\servercommon\serverconfig\appearanceconfig.hpp" />
+    <ClInclude Include="..\servercommon\serverconfig\configstruct.h" />
+    <ClInclude Include="..\servercommon\serverconfig\localconfig.hpp" />
+    <ClInclude Include="..\servercommon\serverconfig\nameconfig.h" />
+    <ClInclude Include="..\servercommon\serverconfig\openserverconfig.hpp" />
+    <ClInclude Include="..\servercommon\serverconfig\serverconfigpool.h" />
+    <ClInclude Include="..\servercommon\struct\global\trademarketparam.hpp" />
+    <ClInclude Include="..\servercommon\struct\roleinfolist.h" />
+    <ClInclude Include="..\servercommon\struct\roleinitparam.h" />
+    <ClInclude Include="..\servercommon\struct\system\cmdlist.h" />
+    <ClInclude Include="..\servercommon\struct\system\cmdresult.h" />
+    <ClInclude Include="..\servercommon\struct\system\publicnoticelist.h" />
+    <ClInclude Include="..\servercommon\tinyxml\tinyxml2.h" />
+    <ClInclude Include="..\servercommon\tinyxml\tinyxml_adapter.hpp" />
+    <ClInclude Include="..\servercommon\userprotocal\loginmsgcode.h" />
+    <ClInclude Include="config\loginconfig.h" />
+    <ClInclude Include="config\reloadconfigmanager.hpp" />
+    <ClInclude Include="dbsessionreconnector.hpp" />
+    <ClInclude Include="engineadapter.h" />
+    <ClInclude Include="internalcomm.h" />
+    <ClInclude Include="loginservermodule.h" />
+    <ClInclude Include="randnamemanager\randnamemanager.hpp" />
+    <ClInclude Include="rmiclient\rmidaloginclient.h" />
+    <ClInclude Include="rmiclient\rmidaroleclient.h" />
+    <ClInclude Include="server\gameserver.h" />
+    <ClInclude Include="server\iplimit.hpp" />
+    <ClInclude Include="server\loginlog.h" />
+    <ClInclude Include="server\loginmanager\loginmanager.hpp" />
+    <ClInclude Include="server\loginserver.h" />
+    <ClInclude Include="server\loginusertrace.hpp" />
+    <ClInclude Include="server\platform\platform.h" />
+    <ClInclude Include="server\platform\platform336.h" />
+    <ClInclude Include="server\platform\platform360.h" />
+    <ClInclude Include="server\platform\platform4399.h" />
+    <ClInclude Include="server\platform\platform91wan.h" />
+    <ClInclude Include="server\platform\PlatformMIX.h" />
+    <ClInclude Include="server\platform\platformyujun.h" />
+    <ClInclude Include="server\protocal\msglogin.h" />
+    <ClInclude Include="server\protocal\msgregister.h" />
+    <ClInclude Include="server\rmibackobjdef.h" />
+    <ClInclude Include="server\roleinitattr.h" />
+    <ClInclude Include="server\spidconfig.h" />
+    <ClInclude Include="server\story\story.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="todo.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

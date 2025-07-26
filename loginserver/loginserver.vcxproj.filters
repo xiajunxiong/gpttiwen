@@ -1,0 +1,349 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="source">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="server">
+      <UniqueIdentifier>{eb26ebf6-9270-41e2-be2d-f69ef5620249}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="server\platform">
+      <UniqueIdentifier>{a557a351-62bf-4d41-b55a-e51b6354dd35}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="server\usertrace">
+      <UniqueIdentifier>{f99a96a0-b662-4acd-9b0d-76e536e07108}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="server\common">
+      <UniqueIdentifier>{1496e83e-8f0a-4a1b-ac45-7d7b8f7e7a1d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="server\logic">
+      <UniqueIdentifier>{c89e1526-9b25-4066-89b6-f695ecbea9ff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="server\log">
+      <UniqueIdentifier>{63dd6a66-c146-4695-8a42-478af43d7ff6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="server\randnamemanager">
+      <UniqueIdentifier>{ec8bc726-b79f-477b-aa17-ce4ffb801cad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="rmiclient">
+      <UniqueIdentifier>{804ea13e-1b2f-4e2d-9ab2-ea9c59b48dfb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="protocal">
+      <UniqueIdentifier>{cfc8d6bb-c6d7-4efa-a90e-c9c506cd9d33}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="protocal\user">
+      <UniqueIdentifier>{374a2e37-bb3a-4c22-8bd0-f3b3c0ced0f9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="commonstruct">
+      <UniqueIdentifier>{f3fefe6f-fad6-476a-95fd-5808dcc7afcc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="commonstruct\roleattrvermanager">
+      <UniqueIdentifier>{fbea1c7e-fa79-4072-86e4-12a5a9d5c291}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="serverconfig">
+      <UniqueIdentifier>{682ec4b9-dcf9-48b1-bed1-d3fc408c19e4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="config">
+      <UniqueIdentifier>{d4125b24-2b5a-4ee2-976d-f5dc18576358}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="namemanager">
+      <UniqueIdentifier>{0832045b-f8d1-403d-a7b7-f9c2a8cc1ae3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="server\logic\loginmanager">
+      <UniqueIdentifier>{b038a81e-7130-4efe-a478-6ac418f22d7d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="server\story">
+      <UniqueIdentifier>{7636f198-2cf9-456c-bc39-0bf711f8da4f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="engineadapter.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="internalcomm.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="loginservermodule.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="server\platform\platform336.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="server\platform\platform4399.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="server\platform\platform91wan.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="server\platform\PlatformMIX.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="server\platform\platformyujun.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="server\platform\platform.cpp">
+      <Filter>server\platform</Filter>
+    </ClCompile>
+    <ClCompile Include="server\platform\platform360.cpp">
+      <Filter>server\platform</Filter>
+    </ClCompile>
+    <ClCompile Include="server\loginusertrace.cpp">
+      <Filter>server\usertrace</Filter>
+    </ClCompile>
+    <ClCompile Include="server\gameserver.cpp">
+      <Filter>server\common</Filter>
+    </ClCompile>
+    <ClCompile Include="server\iplimit.cpp">
+      <Filter>server\common</Filter>
+    </ClCompile>
+    <ClCompile Include="server\loginmempool.cpp">
+      <Filter>server\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\servercommon\namefilter.cpp">
+      <Filter>server\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\servercommon\servercommon.cpp">
+      <Filter>server\common</Filter>
+    </ClCompile>
+    <ClCompile Include="server\loginserver.cpp">
+      <Filter>server\logic</Filter>
+    </ClCompile>
+    <ClCompile Include="server\loginserverregister.cpp">
+      <Filter>server\logic</Filter>
+    </ClCompile>
+    <ClCompile Include="server\roleinitattr.cpp">
+      <Filter>server\logic</Filter>
+    </ClCompile>
+    <ClCompile Include="server\loginlog.cpp">
+      <Filter>server\log</Filter>
+    </ClCompile>
+    <ClCompile Include="rmiclient\rmidaloginclient.cpp">
+      <Filter>rmiclient</Filter>
+    </ClCompile>
+    <ClCompile Include="rmiclient\rmidaroleclient.cpp">
+      <Filter>rmiclient</Filter>
+    </ClCompile>
+    <ClCompile Include="..\servercommon\darmi\rmisystemclient.cpp">
+      <Filter>rmiclient</Filter>
+    </ClCompile>
+    <ClCompile Include="server\protocal\msgcpp.cpp">
+      <Filter>protocal\user</Filter>
+    </ClCompile>
+    <ClCompile Include="..\servercommon\struct\system\cmdlist.cpp">
+      <Filter>commonstruct</Filter>
+    </ClCompile>
+    <ClCompile Include="..\servercommon\struct\system\publicnoticelist.cpp">
+      <Filter>commonstruct</Filter>
+    </ClCompile>
+    <ClCompile Include="..\servercommon\struct\roleinfolist.cpp">
+      <Filter>commonstruct</Filter>
+    </ClCompile>
+    <ClCompile Include="..\servercommon\struct\roleinitparam.cpp">
+      <Filter>commonstruct</Filter>
+    </ClCompile>
+    <ClCompile Include="..\servercommon\roleattrvermanager\roleattrvermanager.cpp">
+      <Filter>commonstruct\roleattrvermanager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\servercommon\serverconfig\configstruct.cpp">
+      <Filter>serverconfig</Filter>
+    </ClCompile>
+    <ClCompile Include="..\servercommon\serverconfig\localconfig.cpp">
+      <Filter>serverconfig</Filter>
+    </ClCompile>
+    <ClCompile Include="..\servercommon\serverconfig\openserverconfig.cpp">
+      <Filter>serverconfig</Filter>
+    </ClCompile>
+    <ClCompile Include="..\servercommon\serverconfig\serverconfigpool.cpp">
+      <Filter>serverconfig</Filter>
+    </ClCompile>
+    <ClCompile Include="config\loginconfig.cpp">
+      <Filter>config</Filter>
+    </ClCompile>
+    <ClCompile Include="randnamemanager\randnamemanager.cpp">
+      <Filter>namemanager</Filter>
+    </ClCompile>
+    <ClCompile Include="config\reloadconfigmanager.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="server\spidconfig.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="server\loginmanager\loginmanager.cpp">
+      <Filter>server\logic\loginmanager</Filter>
+    </ClCompile>
+    <ClCompile Include="server\loginserverlogin.cpp">
+      <Filter>server\logic</Filter>
+    </ClCompile>
+    <ClCompile Include="server\platform\platformasqjh.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\servercommon\struct\global\trademarketparam.cpp">
+      <Filter>commonstruct</Filter>
+    </ClCompile>
+    <ClCompile Include="..\servercommon\serverconfig\nameconfig.cpp">
+      <Filter>serverconfig</Filter>
+    </ClCompile>
+    <ClCompile Include="server\story\story.cpp">
+      <Filter>server\story</Filter>
+    </ClCompile>
+    <ClCompile Include="..\servercommon\serverconfig\appearanceconfig.cpp">
+      <Filter>serverconfig</Filter>
+    </ClCompile>
+    <ClCompile Include="..\servercommon\struct\system\cmdresult.cpp">
+      <Filter>server\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\servercommon\tinyxml\tinyxml_adapter.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\servercommon\tinyxml\tinyxml2.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="dbsessionreconnector.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="engineadapter.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="internalcomm.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="loginservermodule.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="server\platform\platform.h">
+      <Filter>server\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="server\platform\platform360.h">
+      <Filter>server\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="server\loginusertrace.hpp">
+      <Filter>server\usertrace</Filter>
+    </ClInclude>
+    <ClInclude Include="..\servercommon\dbhandler.h">
+      <Filter>server\common</Filter>
+    </ClInclude>
+    <ClInclude Include="server\gameserver.h">
+      <Filter>server\common</Filter>
+    </ClInclude>
+    <ClInclude Include="server\iplimit.hpp">
+      <Filter>server\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\servercommon\namefilter.hpp">
+      <Filter>server\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\servercommon\servercommon.h">
+      <Filter>server\common</Filter>
+    </ClInclude>
+    <ClInclude Include="server\loginserver.h">
+      <Filter>server\logic</Filter>
+    </ClInclude>
+    <ClInclude Include="server\rmibackobjdef.h">
+      <Filter>server\logic</Filter>
+    </ClInclude>
+    <ClInclude Include="server\roleinitattr.h">
+      <Filter>server\logic</Filter>
+    </ClInclude>
+    <ClInclude Include="server\loginlog.h">
+      <Filter>server\log</Filter>
+    </ClInclude>
+    <ClInclude Include="rmiclient\rmidaloginclient.h">
+      <Filter>rmiclient</Filter>
+    </ClInclude>
+    <ClInclude Include="rmiclient\rmidaroleclient.h">
+      <Filter>rmiclient</Filter>
+    </ClInclude>
+    <ClInclude Include="..\servercommon\darmi\rmisystemclient.h">
+      <Filter>rmiclient</Filter>
+    </ClInclude>
+    <ClInclude Include="..\servercommon\internalprotocal\lglobalprotocal.h">
+      <Filter>protocal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\servercommon\internalprotocal\lgprotocal.h">
+      <Filter>protocal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\servercommon\internalprotocal\lwprotocal.h">
+      <Filter>protocal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\servercommon\userprotocal\loginmsgcode.h">
+      <Filter>protocal\user</Filter>
+    </ClInclude>
+    <ClInclude Include="server\protocal\msglogin.h">
+      <Filter>protocal\user</Filter>
+    </ClInclude>
+    <ClInclude Include="server\protocal\msgregister.h">
+      <Filter>protocal\user</Filter>
+    </ClInclude>
+    <ClInclude Include="..\servercommon\struct\system\cmdlist.h">
+      <Filter>commonstruct</Filter>
+    </ClInclude>
+    <ClInclude Include="..\servercommon\struct\system\publicnoticelist.h">
+      <Filter>commonstruct</Filter>
+    </ClInclude>
+    <ClInclude Include="..\servercommon\struct\roleinfolist.h">
+      <Filter>commonstruct</Filter>
+    </ClInclude>
+    <ClInclude Include="..\servercommon\struct\roleinitparam.h">
+      <Filter>commonstruct</Filter>
+    </ClInclude>
+    <ClInclude Include="..\servercommon\roleattrvermanager\roleattrvermanager.h">
+      <Filter>commonstruct\roleattrvermanager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\servercommon\serverconfig\configstruct.h">
+      <Filter>serverconfig</Filter>
+    </ClInclude>
+    <ClInclude Include="..\servercommon\serverconfig\localconfig.hpp">
+      <Filter>serverconfig</Filter>
+    </ClInclude>
+    <ClInclude Include="..\servercommon\serverconfig\openserverconfig.hpp">
+      <Filter>serverconfig</Filter>
+    </ClInclude>
+    <ClInclude Include="..\servercommon\serverconfig\serverconfigpool.h">
+      <Filter>serverconfig</Filter>
+    </ClInclude>
+    <ClInclude Include="config\loginconfig.h">
+      <Filter>config</Filter>
+    </ClInclude>
+    <ClInclude Include="randnamemanager\randnamemanager.hpp">
+      <Filter>namemanager</Filter>
+    </ClInclude>
+    <ClInclude Include="server\platform\platform336.h" />
+    <ClInclude Include="server\platform\platform4399.h" />
+    <ClInclude Include="server\platform\platform91wan.h" />
+    <ClInclude Include="server\platform\PlatformMIX.h" />
+    <ClInclude Include="server\platform\platformyujun.h" />
+    <ClInclude Include="server\spidconfig.h" />
+    <ClInclude Include="config\reloadconfigmanager.hpp">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="server\loginmanager\loginmanager.hpp">
+      <Filter>server\logic\loginmanager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\servercommon\struct\global\trademarketparam.hpp">
+      <Filter>commonstruct</Filter>
+    </ClInclude>
+    <ClInclude Include="..\servercommon\serverconfig\nameconfig.h">
+      <Filter>serverconfig</Filter>
+    </ClInclude>
+    <ClInclude Include="server\story\story.hpp">
+      <Filter>server\story</Filter>
+    </ClInclude>
+    <ClInclude Include="..\servercommon\serverconfig\appearanceconfig.hpp">
+      <Filter>serverconfig</Filter>
+    </ClInclude>
+    <ClInclude Include="..\servercommon\struct\system\cmdresult.h">
+      <Filter>server\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\servercommon\tinyxml\tinyxml_adapter.hpp" />
+    <ClInclude Include="..\servercommon\tinyxml\tinyxml2.h" />
+    <ClInclude Include="dbsessionreconnector.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="todo.txt" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,59 @@
+﻿  rmisystemclient.cpp
+  namefilter.cpp
+  roleattrvermanager.cpp
+  servercommon.cpp
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\dbghelp.h(1544): warning C4091: 'typedef ': ignored on left of '' when no variable is declared
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\dbghelp.h(3190): warning C4091: 'typedef ': ignored on left of '' when no variable is declared
+  appearanceconfig.cpp
+  configstruct.cpp
+  localconfig.cpp
+  nameconfig.cpp
+  openserverconfig.cpp
+..\servercommon\serverconfig\openserverconfig.cpp(103): warning C4244: 'initializing': conversion from 'const time_t' to 'unsigned int', possible loss of data
+..\servercommon\serverconfig\openserverconfig.cpp(120): warning C4244: 'initializing': conversion from 'const time_t' to 'unsigned int', possible loss of data
+  serverconfigpool.cpp
+  trademarketparam.cpp
+  roleinfolist.cpp
+  roleinitparam.cpp
+  cmdlist.cpp
+  cmdresult.cpp
+  publicnoticelist.cpp
+  tinyxml2.cpp
+  tinyxml_adapter.cpp
+  loginconfig.cpp
+  reloadconfigmanager.cpp
+  Compiling...
+  dbsessionreconnector.cpp
+  engineadapter.cpp
+  internalcomm.cpp
+  loginservermodule.cpp
+E:\workspace\unity\t6ys\server\include\common/platform/socket/pisocket.h(39): warning C4005: 'EWOULDBLOCK': macro redefinition
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\errno.h(124): note: see previous definition of 'EWOULDBLOCK'
+  main.cpp
+  randnamemanager.cpp
+  rmidaloginclient.cpp
+  rmidaroleclient.cpp
+  gameserver.cpp
+  iplimit.cpp
+  loginlog.cpp
+  loginmanager.cpp
+server\loginmanager\loginmanager.cpp(116): warning C4244: '=': conversion from 'short' to 'char', possible loss of data
+  loginmempool.cpp
+  loginserver.cpp
+  loginserverlogin.cpp
+  loginserverregister.cpp
+  loginusertrace.cpp
+  platform.cpp
+  platform336.cpp
+  platform360.cpp
+  Compiling...
+  platform4399.cpp
+  platform91wan.cpp
+  platformasqjh.cpp
+  PlatformMIX.cpp
+  platformyujun.cpp
+  msgcpp.cpp
+  roleinitattr.cpp
+  spidconfig.cpp
+  story.cpp
+LINK : fatal error LNK1181: cannot open input file 'gameserver.lib'

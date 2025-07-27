@@ -1,0 +1,16 @@
+import "platform_battle_pet.proto";
+import "platform_battle_partner.proto";
+
+message PB_PlatformBattleRoleData {
+    optional int32 role_id = 1;
+    optional int32 role_pet_train_skill_level = 2;
+    repeated PB_PlatformBattlePet battling_pet = 3;
+    repeated PB_PlatformBattlePartner battling_partner = 4;
+	optional int32 role_level = 5;
+	optional int32 avatar_type = 6;
+	optional int32 headshot_id = 7;
+	optional string role_name = 8;
+	optional int32 prof = 9;
+	optional uint32 top1_time = 10;
+	optional int32 param1 = 11;
+}

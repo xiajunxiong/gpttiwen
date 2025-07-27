@@ -1,0 +1,13 @@
+import "pet_battle_data.proto";
+
+message PB_PlatformBattlePet {
+    optional int32 pet_index = 1;
+    optional int32 pet_id = 2;
+    optional int32 pos = 3;
+    optional int32 pet_capability = 4;
+    optional int32 pet_level = 5;
+    optional int32 pet_strengthen_level = 6;
+    optional string pet_name = 7;
+    optional PB_PetBattleData pet_battle_data = 8;
+	optional int64 item_unique_id = 9;
+}

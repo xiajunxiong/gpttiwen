@@ -1,0 +1,9 @@
+message PB_WorldArenaScheduleData {
+	optional int64 group_id = 1;		//!< 组别id
+	optional int64 schedule_id = 2;		//!< 赛程唯一ID
+	optional int64 attacker_uuid = 3;	//!< 攻方信息
+	optional int64 defender_uuid = 4;	//!< 守方信息
+	optional int32 round_index = 5;		//!< 场次序号[0, 19)
+	optional int32 fight_result = 6;	//!< 对战结果
+	optional uint32 check_result_timestamp = 7; //!< 检查结果时间戳 到时间就检查是否出了结果，未有结果就设为平局
+}

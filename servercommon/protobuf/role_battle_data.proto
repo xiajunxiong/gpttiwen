@@ -1,0 +1,106 @@
+import "battle_character_data.proto";
+import "pet_battle_data.proto";
+import "partner_battle_data.proto";
+
+message PB_RoleBattleData {
+    optional bool is_auto = 1;
+    optional bool is_role_stand_front = 2;
+    optional PB_BattleCharacterData role_character_data = 3;
+
+    optional int32 huanshou_level = 4;
+    repeated PB_PartnerBattleData partner_character_data = 5;
+    optional sint32 fight_pet_idx = 6;
+    repeated PB_PetBattleData pet_character_data = 7;
+    optional int32 auto_first_move_type = 8;
+    optional int32 auto_first_skill_id = 9;
+    optional int32 auto_first_skill_level = 10;
+    optional int32 auto_second_move_type = 11;
+    optional int32 auto_second_skill_id = 12;
+    optional int32 auto_second_skill_level = 13;
+    
+    message AttrInfo {
+        optional int32 attr_type = 1;
+        optional int32 attr_value = 2;
+    }
+    repeated AttrInfo weapon_attr_list = 14;
+
+    repeated int32 weapon_sp_list = 15;
+    repeated int32 other_sp_list = 16;
+
+    message BattleFabao {
+        optional int32 fabao_id = 1;
+        optional int32 fabao_level = 2;
+        optional int32 fabao_skill_type = 3;
+        optional int32 fabao_grade = 4; 
+        optional int32 fabao_effect_percent_num = 5; 
+	optional int32 fabao_effect_percent_num_2 = 6;
+    }
+    repeated BattleFabao fabao_list = 17;
+    
+    optional bytes appearance = 18; // Appearance直接保存字节序列
+	
+	//optional int32 guild_buff_id_1 = 19; // 家族buff_1 (已废弃 编号19不可再用)
+	//optional int32 guild_buff_id_2 = 20; // 家族buff_2 (已废弃 编号20不可再用)
+	
+	repeated int32 guild_buff_list = 21;
+	
+	message PetPartnerBattleData {
+		optional int32 battle_row = 1;
+		optional int32 battle_column = 2;
+		optional PB_PetBattleData pet_data = 3;
+	}
+	repeated PetPartnerBattleData pet_helper_data = 22; // 宠物助战列表
+    optional int32 top_level = 23;              //巅峰等级
+
+    message BattleHeartSkill {
+        optional int32 skill_id = 1;
+        optional int32 skill_level = 2;
+        optional int32 remain_times = 3;
+    }
+    //optional BattleHeartSkill heart_skill = 24;            //心法技能 
+    optional int32 heart_skill_is_vaild = 25;
+    repeated BattleHeartSkill heart_skill_list = 26;       //心法技能列表
+	
+	repeated int32 jieyi_uid_list = 27;			// 结义对象uid列表
+	repeated int32 jieyi_skill_list = 28;		// 结义技能列表
+	
+	optional int32 soaring_skill_id = 29;		// 飞升技能ID
+	optional int32 soaring_skill_lv = 30;		// 飞升技能等级
+	
+	optional int32 qingyuan_target_uid = 31;	// 情缘对象角色ID
+	repeated int32 qingyuan_skill_list = 32;	// 情缘技能列表
+	
+	optional bool is_robot = 33;  // 是否机器人
+	
+	optional int32 career_suppress_value = 34;	// 职业进阶等级压制值
+    optional int32 change_card_skill_id = 35;   // 变身卡技能ID
+    optional int32 change_card_seq = 36;   // 变身卡seq
+	
+	optional int32 role_extra_capability = 37;  // 玩家角色除战斗数据外的额外战斗力（通过配置而来）
+	
+	message BattleHallowData {
+		optional int32 hallow_id = 1;
+		optional int32 hallow_lv = 2;
+		optional double attr_active = 3;
+		optional double attr_active_max = 4;
+		optional double attr_damage = 5;
+		optional double attr_recover = 6;
+		optional double attr_knock_off = 7;
+		optional double attr_anti_knock_off = 8;
+		optional double attr_intervene = 9;
+		optional double attr_speed = 10;
+		repeated int32 skill_id_list = 12;
+		repeated int32 skill_lv_list = 13;
+		repeated int32 gift_list = 14;
+	}
+	repeated BattleHallowData hallow_list = 38;
+    optional int32 fight_hallow_idx = 39;
+
+    message BattleHuanShouSkill {
+        optional int32 skill_id = 1;
+        optional int32 skill_level = 2;
+        optional int32 cd_start = 3;
+        optional int32 cd_perform = 4;
+    }
+    optional BattleHuanShouSkill huanshou_skill = 40;
+}

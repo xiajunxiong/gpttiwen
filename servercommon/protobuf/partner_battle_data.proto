@@ -1,0 +1,11 @@
+import "battle_character_data.proto";
+
+message PB_PartnerBattleData {
+    optional PB_BattleCharacterData battle_data = 1;
+	optional int32 skin_id = 2;
+	optional int32 battle_row = 3;
+	optional int32 battle_column = 4 [default = -1];
+	optional int32 other_sp_num = 5;
+	repeated int32 other_sp_list = 6;
+	optional int32 str_lv = 7;			// 强化等级
+}

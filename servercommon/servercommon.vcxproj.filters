@@ -1,0 +1,217 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClInclude Include="serverdef.h" />
+    <ClInclude Include="servercommon.h" />
+    <ClInclude Include="darmi\dacross.hpp">
+      <Filter>darmi</Filter>
+    </ClInclude>
+    <ClInclude Include="darmi\daglobal.hpp">
+      <Filter>darmi</Filter>
+    </ClInclude>
+    <ClInclude Include="darmi\dalogin.h">
+      <Filter>darmi</Filter>
+    </ClInclude>
+    <ClInclude Include="darmi\damodule.h">
+      <Filter>darmi</Filter>
+    </ClInclude>
+    <ClInclude Include="darmi\darole.h">
+      <Filter>darmi</Filter>
+    </ClInclude>
+    <ClInclude Include="darmi\dasystem.h">
+      <Filter>darmi</Filter>
+    </ClInclude>
+    <ClInclude Include="string\crossstr.h">
+      <Filter>string</Filter>
+    </ClInclude>
+    <ClInclude Include="string\gameworldstr.h">
+      <Filter>string</Filter>
+    </ClInclude>
+    <ClInclude Include="string\globalstr.h">
+      <Filter>string</Filter>
+    </ClInclude>
+    <ClInclude Include="serverconfig\configstruct.h">
+      <Filter>serverconfig</Filter>
+    </ClInclude>
+    <ClInclude Include="serverconfig\localconfig.hpp">
+      <Filter>serverconfig</Filter>
+    </ClInclude>
+    <ClInclude Include="serverconfig\serverconfigpool.h">
+      <Filter>serverconfig</Filter>
+    </ClInclude>
+    <ClInclude Include="logindef.h" />
+    <ClInclude Include="basedef.h" />
+    <ClInclude Include="crossdef.hpp" />
+    <ClInclude Include="errornum.h" />
+    <ClInclude Include="commondata.hpp" />
+    <ClInclude Include="serverconfig\openserverconfig.hpp">
+      <Filter>serverconfig</Filter>
+    </ClInclude>
+    <ClInclude Include="guilddef.hpp" />
+    <ClInclude Include="struct\mailparam.hpp" />
+    <ClInclude Include="rolecrystalfbdef.h" />
+    <ClInclude Include="courseofgrowthdef.h" />
+    <ClInclude Include="struct\global\platformbattleparam.hpp" />
+    <ClInclude Include="matchmanager\matchdef.hpp">
+      <Filter>matchmanager</Filter>
+    </ClInclude>
+    <ClInclude Include="matchmanager\matchmanager.hpp">
+      <Filter>matchmanager</Filter>
+    </ClInclude>
+    <ClInclude Include="matchmanager\matchqueue.hpp">
+      <Filter>matchmanager</Filter>
+    </ClInclude>
+    <ClInclude Include="matchmanager\matchengine.hpp">
+      <Filter>matchmanager</Filter>
+    </ClInclude>
+    <ClInclude Include="matchmanager\imatchlogic.hpp">
+      <Filter>matchmanager</Filter>
+    </ClInclude>
+    <ClInclude Include="uniqueidgenerator.hpp" />
+    <ClInclude Include="chatserverdef.h" />
+    <ClInclude Include="roleattrvermanager\battlecharacterdatavermgr.h" />
+    <ClInclude Include="protobuf\battle_character_data.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="protobuf\partner_battle_data.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="protobuf\pet_battle_data.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="protobuf\platform_battle_partner.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="protobuf\platform_battle_pet.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="protobuf\platform_battle_role_data.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="protobuf\role_battle_data.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="protobuf\cloud_arena_fight_record_user_info.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="protobuf\cloud_arena_fight_record.pb.h">
+      <Filter>protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\common\platform\thread\event.h" />
+    <ClInclude Include="..\..\include\common\platform\thread\mutex.h" />
+    <ClInclude Include="..\..\include\common\platform\thread\semaphore.h" />
+    <ClInclude Include="..\..\include\common\platform\thread\thread.h" />
+    <ClInclude Include="..\..\include\common\platform\thread\threadqueue.h" />
+    <ClInclude Include="..\..\include\common\platform\thread\threadqueueex.h" />
+    <ClInclude Include="..\..\include\common\platform\thread\tlskey.h" />
+    <ClInclude Include="skiplist.hpp" />
+    <ClInclude Include="hongbaodef.hpp" />
+    <ClInclude Include="roleactivity\rayunzeterritoryparam.hpp" />
+    <ClInclude Include="roleactivity\rayunzebloomingrecordparam.hpp" />
+    <ClInclude Include="roleactivity\rayunzeslotmachineparam.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="servercommon.cpp" />
+    <ClCompile Include="string\gamestring.cpp">
+      <Filter>string</Filter>
+    </ClCompile>
+    <ClCompile Include="serverconfig\configstruct.cpp">
+      <Filter>serverconfig</Filter>
+    </ClCompile>
+    <ClCompile Include="serverconfig\localconfig.cpp">
+      <Filter>serverconfig</Filter>
+    </ClCompile>
+    <ClCompile Include="serverconfig\serverconfigpool.cpp">
+      <Filter>serverconfig</Filter>
+    </ClCompile>
+    <ClCompile Include="serverconfig\openserverconfig.cpp">
+      <Filter>serverconfig</Filter>
+    </ClCompile>
+    <ClCompile Include="guilddef.cpp" />
+
+    <ClCompile Include="struct\global\platformbattleparam.cpp" />
+    <ClCompile Include="matchmanager\matchmanager.cpp">
+      <Filter>matchmanager</Filter>
+    </ClCompile>
+    <ClCompile Include="matchmanager\matchengine.cpp">
+      <Filter>matchmanager</Filter>
+    </ClCompile>
+    <ClCompile Include="uniqueidgenerator.cpp" />
+    <ClCompile Include="chatserverdef.cpp" />
+    <ClCompile Include="roleattrvermanager\battlecharacterdatavermgr.cpp" />
+    <ClCompile Include="protobuf\battle_character_data.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="protobuf\partner_battle_data.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="protobuf\pet_battle_data.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="protobuf\platform_battle_partner.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="protobuf\platform_battle_pet.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="protobuf\platform_battle_role_data.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="protobuf\role_battle_data.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="protobuf\cloud_arena_fight_record_user_info.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="protobuf\cloud_arena_fight_record.pb.cc">
+      <Filter>protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="hongbaodef.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="darmi">
+      <UniqueIdentifier>{2495eb07-5549-4c34-a9fc-0c0464a25edf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="string">
+      <UniqueIdentifier>{01a47d60-88db-4415-8af8-7edcdc16736d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="serverconfig">
+      <UniqueIdentifier>{66d80a3f-abe6-4da0-a017-f5aa8d483043}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="matchmanager">
+      <UniqueIdentifier>{fb4bdce7-8ed0-4c23-b44c-f9f85742fab3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="protobuf">
+      <UniqueIdentifier>{e8fc3a25-a1f7-4eac-84cb-8f4b0e52fa2f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="protobuf\battle_character_data.proto">
+      <Filter>protobuf</Filter>
+    </None>
+    <None Include="protobuf\partner_battle_data.proto">
+      <Filter>protobuf</Filter>
+    </None>
+    <None Include="protobuf\pet_battle_data.proto">
+      <Filter>protobuf</Filter>
+    </None>
+    <None Include="protobuf\platform_battle_partner.proto">
+      <Filter>protobuf</Filter>
+    </None>
+    <None Include="protobuf\platform_battle_pet.proto">
+      <Filter>protobuf</Filter>
+    </None>
+    <None Include="protobuf\platform_battle_role_data.proto">
+      <Filter>protobuf</Filter>
+    </None>
+    <None Include="protobuf\role_battle_data.proto">
+      <Filter>protobuf</Filter>
+    </None>
+    <None Include="protobuf\cloud_arena_fight_record.proto">
+      <Filter>protobuf</Filter>
+    </None>
+    <None Include="protobuf\cloud_arena_fight_record_user_info.proto">
+      <Filter>protobuf</Filter>
+    </None>
+  </ItemGroup>
+</Project>

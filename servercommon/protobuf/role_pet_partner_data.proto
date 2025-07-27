@@ -1,0 +1,36 @@
+message PB_RolePetInfoData {
+
+    message PetPrintItem {
+       optional int32 item_id = 1;
+       optional int32 level = 2;
+    }
+
+    message PetData {     
+       optional int64 item_unique_id = 1;
+       optional int32 item_id = 2;
+       optional int32 str_level = 3;
+       repeated int32 skill_id_list = 4;
+       optional int32 soul_item_id = 5;
+       optional int32 soul_level = 6;
+       repeated int32 zhufu_pet_item_id = 7;
+       repeated PetPrintItem god_print_item = 8;
+       optional int32 capability = 9;
+    }
+
+    repeated PetData pet_data_list = 1;
+}
+
+message PB_RolePartnerInfoData {
+     message PartnerData {
+       optional int32 partner_id = 1;
+       optional int32 level = 2;
+       optional int32 upgrade_lv = 3;
+       optional int32 quality = 4;
+       optional int32 quality_segment = 5;
+       repeated int32 pact_id_list = 6;
+       repeated int32 equip_list= 7;
+       optional int32 capability = 8;
+    }
+
+    repeated PartnerData pertner_data_list = 1;
+}

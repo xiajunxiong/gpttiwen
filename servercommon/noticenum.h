@@ -1,0 +1,116 @@
+#ifndef __NOTICENUM_H__
+#define __NOTICENUM_H__
+
+namespace noticenum
+{
+	//成功提示码 从200000开始
+
+	enum NOTICE_NUM_DEF
+	{
+		NT_SEND_ADD_FRIEND_REQ_SUCC = 200000,					//好友申请发送成功
+		NT_SYSTEM_SET_SUCC,										//设置成功
+		NT_NEWHAND_GUILD_SUCC,									//恭喜您被选拔为新手指导员
+		NT_SHITU_MAKE_RELATION_MASTER_REQ_SUCC,					//发送拜师请求成功
+		NT_SHITU_MAKE_RELATION_APPRENTICE_REQ_SUCC,				//发送收徒请求成功
+		NT_SHITU_MAKE_RELATION_APPRENTICE_ACK_SUCC,				//对方同意了你的收徒请求
+		NT_SHITU_MAKE_RELATION_SUCC,							//恭喜，成功缔结了师徒关系
+		NT_SHITU_BREAK_RELATION_SUCC,							//成功断绝了师徒关系
+		NT_SHITU_QINGYI_LEVEL_UP,								//恭喜，您的情义等级上升了
+		NT_SHITU_USE_QINGYI_DAN_SUCC,							//恭喜，成功提升了情义值
+		NT_SHITU_UPGRADE_XIUWEI_SUCC,							//恭喜，成功提升了修为
+		NT_SHITU_MAKE_RELATION_MASTER_ACK_SUCC,					//对方同意了你的拜师请求
+		NT_SHI_TU_SEEKING_SUCC,									//宣言成功
+		NT_TEAM_JOIN_SUCC,										//成功加入队伍
+		NT_TEAM_JOIN_REQ_SUCC,									//入队申请发送成功
+		NT_GIVE_FLOWER_SUCC,									//送花成功
+		NT_TEAM_ROLE_BECOME_LEADER,								//恭喜！你已成为队长
+		NT_TEAM_CREATE_SUCC,									//创建队伍成功
+		NT_TEAM_INVITE_SUCC,									//邀请成功
+		NT_TEAM_INVITE_BE_REFUSED,								//对方拒绝了您的组队邀请
+		NT_KNAPSACKFULL_SEND_MAIL,								//您的背包已满，物品已由邮件下发，请注意查收
+		NT_INVITATION_ALREADY_SEND,								//邀请已发出，请耐心等待回复
+		NT_HE_WONT_JOIN_YOUR_GUILD,								//对方暂时不想加入您的家族
+		NT_FIGHT_REQUEST_ALREADY_SEND,							//战书已送达对方
+		NT_USE_TREASURE_MAP_GET_ITEM,							//你挖到了妖怪留下的宝物
+		NT_SPEAK_TALK_SUCC,										//发送成功
+		NT_TEAM_VOTE_LAUNCH_SUCC,								//发起投票成功，请稍等！
+		NT_NPC_SHOP_BUY_SUCC,									//购买成功
+		NT_BUFF_EFFECT_SUCC,									//获得增益效果
+		NT_BUFF_ADD_HPMP_SUCC,									//回复了部分状态
+		NT_SHITU_MAKE_RELATION_DISPATCH_TEACHERS_REQ_SUCC,		//已成功发送申请，请等待对方回复
+		NT_SHITU_MAKE_RELATION_DISPATCH_TEACHERS_ACK_SUCC,		//您同意了出师申请，双方解除师徒关系
+		NT_SHITU_MAKE_RELATION_DISPATCH_TEACHERS_SUCC,			//对方同意出师申请，双方解除师徒关系
+		NT_SHITU_MAKE_RELATION_GRADUATION_ACK_SUCC,				//您同意了结业申请，双方解除师徒关系
+		NT_SHITU_MAKE_RELATION_GRADUATION_SUCC,					//对方同意结业申请，双方解除师徒关系
+		EN_SHITU_TARGET_REJECT_REQ,								//您拒绝了出师申请
+		EN_SHITU_TARGET_OTHER_PARTY_NOT_ONLINE_REQ,				//对方不在线，暂时无法发送申请
+		NT_TASK_ADV_ADD_SUCC,									//奇遇任务已开始,请于1小时内完成该任务
+		NT_EQUIP_STONE_TRANF_SUCC,								//已自动将宝石转移至新装备上
+		NT_GUILD_CHANGE_NAME_SUCC,								//家族名称修改成功
+		NT_TREASURE_MAP_NOT_ITEM_DROP,							//强盗灰溜溜的逃走了，什么都没有留下
+		NT_LEAVE_TEAM_AFTER_BATTLE,								//本次操作将于战斗结束后生效
+		NT_PATROL_TASK_ACCPECT_SUCC,							//已接到今天的维护治安任务，请加油
+		NT_WORLD_QUESTION_ANSWER_SUCC,							//回答正确，恭喜少侠获得奖励！
+		NT_STAGE_TASK_LAST_SUCC,								//恭喜你！你得到了晋升阶级的资格
+		NT_RA_SEVEN_PICTURE_SUCC,								//上色成功
+		NT_RA_SEVEN_PICTURE_USE_SUCC,							//鲜花使用成功,请打开七彩图鉴界面查看!
+		NT_TEAM_LEADER_SUMMON_SENT,								//已成功发送召回请求
+		NT_BATTLE_LEADER_GIVEUP,                                //队长放弃了本场战斗
+		NT_ACTIVITY_SIGN_UP_SUCC,								//报名成功
+		NT_WAIT_FOR_ANIMATION,									//正在等待其他玩家播放动画结束...
+		NT_ANIMACE_RACE_BET_SUCC,								//下注成功
+		NT_GUILD_CHANGE_BANNER_SUCC,							//家族族徽修改成功
+		NT_CHAT_GROUP_NOTICE_DISMISS,							//解散成功
+		NT_CHAT_GROUP_ENTER_SUCC,								//成功加入群组
+		NT_CHAT_GROUP_IVENTE_SUCC,								//成功发送邀请
+		NT_WORKSHOP_PET_BREAK_SUCC,								//分解成功
+		NT_GUILD_GATHER_DREAM_GIFT_SUCC,						//赠送成功
+		NT_GUILD_GATHER_DREAM_PUBLISH_SUCC,						//发布成功
+		NT_CHAT_GROUP_CREATE_SUCC,								//创建群组成功
+		NT_CHAT_GROUP_LEAVE_SUCC,								//退出群组成功
+		NT_SEND_ADD_ALL_FRIEND_REQ_SUCC,						//一键申请发送成功
+		NT_PET_LOCK_SUCC,										//宠物已锁定，放生、交易、被作为强化材料时将受限制
+		NT_PET_UNLOCK_SUCC,										//宠物已解锁
+		NT_RA_MG_ANSWER_SUCC,									//答题正确
+		NT_GIVE_SECRET_KEY_GET_REWARD_SUCC,						//领取成功
+		NT_TEMP_GROUP_BECOME_OFFICIAL_SUCC,						//临时群转正成功
+		NT_BUFF_DIF_EFFECT_SUCC,								//获得减益效果
+		NT_SMART_MOUNTS_SYSTEM_WEAR_SUCC,						//穿戴成功
+		NT_SMART_MOUNTS_SYSTEM_ORNAMENTS_TAKE_OFF,				//饰品已卸下
+		NT_PET_SOUL_EQUIP_UPLEVEL,								//魂器升级成功
+		NT_PET_SOUL_EQUIP_UPSTEPS,								//魂器突破成功
+		NT_PET_SOUL_EQUIP_UPREFINE,								//魂器精炼成功
+		NT_FANG_FRAUD_SUCC,										//恭喜少侠回答成功
+		NT_PET_SOUL_EQUIP_CHANGE_SUCC,							//魂器转换成功
+		NT_BIG_DIPPER_HELP_NOTIC,								//队伍中存在本周未通关玩家，本次挑战将获得助战奖励
+		NT_BIG_DIPPER_HELP_SUCC,								//您助人为乐的举动获得了星君的赏赐！
+		NT_COW_REPORT_GOOD_NEWS_BUY_SUCC,						//您已申购本期福牛报喜活动，祝您好运！
+		NT_ROLE_CHANGE_COLOR_SUCC,								//恭喜你，成功完成圣装颜色更换
+		NT_RELIC_SKILL_BOX_REFRESH_SUCC,						//遗迹刷新了强力的道具，快去抢夺吧！
+		NT_RA_HU_XING_DA_YUN_SUCC,								//您已开始同行
+		NT_TIGER_BRINGS_BLESSING_BUY_SUCC,						//您已申购本期寅虎纳福活动，祝您好运！
+		NT_RA_CINIU_YINXINGHU_ADD_TIGER,						//使用成功，已添增虎气值
+		NT_NEW_LIFE_SKILL_RELIEVE_SURFACE_SUCC,					//已解除幻化效果，战斗将不会扣除幻化点
+		NT_FALLEN_GOD_HELP_SUCC,								//您助人为乐的举动获得了魂灵的赏赐！
+		NT_WORLD_ARENA_SIGNUP_SUCC,								//报名成功，后续赛事请留意赛事详情和邮件
+		NT_WORLD_ARENA_TODAY_GIVEUP,							//由于您未参与今日论剑九州，今日赛程已判断为弃权
+		NT_WORLD_ARENA_OPPONENT_NOT_SHOW_UP,					//由于对手未能及时赶到，本场比赛胜利
+		NT_RELIC_LOOTING_HELP_MEMBER_SUCC,						//您已成功解救队友
+		NT_SYSTEM_FOOD_NOTICE,									//临时获得所有十星烹饪效果加成，战斗后消失
+		NT_WORLD_TEAM_ARENA_SIGN_UP_SUCC,						//确认成功
+		NT_NEW_LIFE_SKILL_FIGHT_CHANGE_SURFACE_SUCC,			//幻化更换成功，将在下场战斗生效
+		NT_QINGYUAN_DUIDUIPENG_START_GAME,						//您的队友已就绪
+		NT_UTA_GUESS_BET_SUCC,									//竞猜下注成功
+		NT_FASTFORWARD_WIN,										//操作成功，战斗胜利
+		NT_FASTFORWARD_LOSE,									//战斗失败，建议手动操作进行挑战哦！
+		NT_ZAO_HUA_DISCOMPOSE_SUCC,								//分解成功
+		NT_HMTJ_ZHUZHAN_NOTICE,									//本场战斗胜利后将获得助战奖励
+		NT_NOW_IS_DOUBLE_SPEED_ANIMATION,						//当前已开启2倍速战斗
+		NT_BATTLE_SURRENDER_SUCC,								//您已认输，本场战斗判负
+		NT_BATTLE_LEADER_SURRENDER,								//队长已认输，本场战斗判负
+		NT_BATTLE_OPPONENT_SURRENDER,							//对方已认输，本场战斗您已获胜
+	};
+}
+
+#endif
+

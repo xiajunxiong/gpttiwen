@@ -1,0 +1,14 @@
+message PB_WorldArenaBaseData {
+	optional int32 cur_status = 1;						//!< 当前状态
+	optional int32 season_index = 2;					//!< 赛季号
+	optional uint32 next_status_timestamp = 3;			//!< 下次状态变化时间戳
+	optional uint32  next_signup_status_timestamp = 4;	//!< 下次报名阶段时间戳
+	optional uint32  next_schedule_status_timestamp = 5;//!< 下次分组阶段时间戳
+	optional uint32  next_battle_status_timestamp = 6;	//!< 下次开战阶段时间戳
+	optional uint32  next_calculate_status_timestamp = 7;//!<下次结算阶段时间戳
+	optional uint32  next_rest_status_timestamp = 8;	//!< 下次休赛阶段时间戳
+	optional int32  robot_index_generator = 9;			//!< 用于机器人UUID生成
+
+	optional uint32  round_battle_start_timestamp = 10;	//!< 本轮战斗开始时间戳
+	optional uint32  next_round_battle_start_timestamp = 11; //!< 下轮战斗开始时间戳
+}

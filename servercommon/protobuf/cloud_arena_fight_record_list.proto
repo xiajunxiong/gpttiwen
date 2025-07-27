@@ -1,0 +1,5 @@
+import "cloud_arena_fight_record.proto";
+
+message PB_CloudArenaFightRecordList {
+	repeated PB_CloudArenaFightRecord record_list = 1;
+}

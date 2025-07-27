@@ -1,0 +1,165 @@
+/******************************************************************************************
+FileName: crossdef.hpp
+Author: dreamwang
+Description: cross相关定义 
+Version: 1.0
+History: 
+<author>    <time>					<version >    <desc>
+dreamwang   2011/08/08/ 09:04:05     1.0           创建
+*****************************************************************************************/
+
+#ifndef __CROSS_DEF_HPP__
+#define __CROSS_DEF_HPP__
+
+#include "servercommon.h"
+
+static const int CROSS_CONNECT_ASYN_TIME_OUT_MS = 10000;		// 异步连接cross超时限制 毫秒
+
+static const int CROSS_PROTOCAL_VERSION = 1;					// cross通讯协议版本号
+
+static const int CROSS_USER_DB_INDEX = 2046;					// 跨服玩家固定db_index
+static const int CROSS_USER_CROSS_ACTIVITY_MARK_BIT = 14;		// 跨服玩家role_id分两部分 cross_activity_type 7bit + 自增分配 14bit
+static const int CROSS_USER_INC_ID_MAX = (1 << DB_INDEX_MARK_BIT) - 1;					// 自增分配id最大值
+
+static const int WAIT_SCENE_MAX = 16;							// 一个跨服活动等待场景最大数
+
+static const int CROSS_MELEE_RESULT_KEEP_MAX_NUM = 4;
+
+
+inline bool IsCrossUser(const UserID &user_id)
+{
+	return (CROSS_USER_DB_INDEX == user_id.db_index);
+}
+
+inline int GetCrossUserCrossActivityType(const UserID &user_id)
+{
+	if (IsCrossUser(user_id))
+	{
+		int cross_activity_type = (user_id.role_id >> CROSS_USER_CROSS_ACTIVITY_MARK_BIT);
+		if (cross_activity_type > 0 && cross_activity_type < CROSS_ACTIVITY_TYPE_MAX)
+		{
+			return cross_activity_type + CROSS_ACTIVITY_TYPE_INVALID;
+		}
+	}
+
+	return CROSS_ACTIVITY_TYPE_INVALID;
+}
+
+struct UniqueServerID
+{
+	UniqueServerID() : plat_type(-1), server_id(0) {}
+	UniqueServerID(const UniqueServerID &v) : plat_type(v.plat_type), server_id(v.server_id) {}
+	UniqueServerID(int _plat_type, int _server_id) : plat_type(_plat_type), server_id(_server_id) {}
+
+	bool operator<(const UniqueServerID &right) const
+	{
+		return plat_type < right.plat_type || (plat_type == right.plat_type && server_id < right.server_id);
+	}
+
+	bool operator==(const UniqueServerID &right) const
+	{
+		return plat_type == right.plat_type && server_id == right.server_id;
+	}
+
+	bool operator!=(const UniqueServerID &right) const
+	{
+		return plat_type != right.plat_type || server_id != right.server_id;
+	}
+
+	int plat_type;												// 平台类型
+	int server_id;												// 服ID
+};
+
+static const UniqueServerID INVALID_UNIQUE_SERVER_ID(-1, 0);
+
+struct UniqueUserID
+{
+	UniqueUserID() : plat_type(-1), user_id(INVALID_USER_ID) {}
+	UniqueUserID(const UniqueUserID &v) : plat_type(v.plat_type), user_id(v.user_id) {}
+	UniqueUserID(int _plat_type, const UserID &_user_id) : plat_type(_plat_type), user_id(_user_id) {}
+
+	bool operator<(const UniqueUserID& right) const
+	{
+		return plat_type < right.plat_type || (plat_type == right.plat_type && user_id < right.user_id);
+	}
+
+	bool operator==(const UniqueUserID &right) const
+	{
+		return plat_type == right.plat_type && user_id == right.user_id;
+	}
+
+	bool operator!=(const UniqueUserID &right) const
+	{
+		return plat_type != right.plat_type || user_id != right.user_id;
+	}
+
+	int plat_type;												// 平台类型
+	UserID user_id;												// UserID
+};
+
+static const UniqueUserID INVALID_UNIQUE_USER_ID(-1, INVALID_USER_ID);
+
+inline long long UniqueUserIDToLongLong(const UniqueUserID &unique_user_id)
+{
+	return TranslateInt64(unique_user_id.plat_type, UidToInt(unique_user_id.user_id));
+}
+
+inline long long UniqueServerIDToLongLong(const UniqueServerID &unique_server_id)
+{
+	return TranslateInt64(unique_server_id.plat_type, unique_server_id.server_id);
+}
+
+inline UniqueUserID LongLongToUniqueUserID(long long uuid)
+{
+	UniqueUserID unique_user_id;
+	unique_user_id.plat_type = static_cast<int>(uuid >> 32);
+	unique_user_id.user_id = IntToUid(static_cast<int>(uuid & 0xffffffff));
+	return unique_user_id;
+}
+
+inline UniqueServerID LongLongToUniqueServerID(long long usid)
+{
+	UniqueServerID unique_server_id;
+	unique_server_id.plat_type = static_cast<int>(usid >> 32);
+	unique_server_id.server_id = static_cast<int>(usid & 0xffffffff);
+	return unique_server_id;
+}
+
+//-------------------------------------------------------------------------------------
+#pragma pack(push, 4)
+
+static const int CROSS_RECORD_SAVE_INTERVAL = 30;			// 个人跨服记录保存间隔
+
+struct UserCrossRecordData									// 个人跨服记录数据 会用在协议中 注意对齐
+{
+	UserCrossRecordData() { this->Reset(); }
+
+	void Reset()
+	{
+		cross_common_need_sync_to_role = 0;
+		reserve_sh = 0;
+	}
+
+	short cross_common_need_sync_to_role;									// 通用数据 - 是否需要同步到角色
+	short reserve_sh;
+};
+
+typedef char UserCrossRecordDataHex[sizeof(UserCrossRecordData) * 2 + 1];
+UNSTD_STATIC_CHECK(sizeof(UserCrossRecordDataHex) < 1024);
+
+#pragma pack(pop)
+
+static const int CROSS_ACTIVITY_OPEN_TIME_CFG_MAX_COUNT = 10;				// 活动开启时间最大配置数
+
+//-------------------------------------------------------------------------------------
+
+static const int CROSS_RA_CHONGZHI_RANK_MAX_NUM = 50;						// 跨服随机活动-充值排行最大个数
+
+static const int CROSS_RA_CONSUME_RANK_MAX_NUM = 50;						// 跨服随机活动-消费排行最大个数
+
+//-------------------------------------------------------------------------------------
+
+static const int CROSS_PUBLIC_SCENE_KEY = 1;								// 跨服通用场景KEY
+
+#endif // __CROSS_DEF_HPP__
+

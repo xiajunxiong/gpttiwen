@@ -1,0 +1,16 @@
+message PB_RoleMirageTerritoryInfoData {
+
+    message MirageTerritoryInfo {
+       optional int32 top_seq = 1;//对应最高通关seq
+       optional int32 now_seq = 2;//对应当前通关seq
+    }
+	
+	message MirageTerritoryAllInfo {
+       optional int32 today_pass_times = 1;//今天通关次数
+       optional int32 pass_area = 2;//今天派遣分区
+	   optional int32 pass_seq = 3;//今天派遣seq
+	   repeated MirageTerritoryInfo partner_list = 4;//各分区通关信息
+    }
+
+    repeated MirageTerritoryAllInfo pertner_data_list = 1;
+}

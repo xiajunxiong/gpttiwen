@@ -1,0 +1,40 @@
+import "role_battle_data.proto";
+
+message PB_WorldArenaUserSignupData {
+	optional int32 uid = 1;
+	optional int32 plat_type = 2;
+	optional int64 uuid = 3;
+	optional int32 profession = 4;
+	optional int32 avatar_type = 5;
+	optional int32 headshot_id = 6;
+	optional int32 level = 7;
+	optional int32 season_index = 8;
+	optional int32 top_level = 9;
+	optional string role_name = 10;
+	optional string guild_name = 11;
+}
+
+message PB_WorldArenaUserScoreData {
+	optional int32 win_num = 1;			//!< 胜利数
+	optional int32 lose_num = 2;		//!< 失败数
+	optional int32 draw_num = 3;		//!< 平局数
+	optional int32 total_score = 4;		//!< 总积分
+	optional int32 win_box_reward_flag = 5; //!< 胜场宝箱领取标记
+	optional int32 giveup_num = 6;		//!< 弃权场数
+	optional bool today_giveup_notice = 7;	//!< 今天是否弃权飘字通知
+	optional int32 total_battle_round = 8;	//!< 总回合数
+	optional bool has_fetch_signup_reward = 9; //!< 是否已领取报名奖励
+	optional int32 daily_reward_fetch_flag = 10; //!< 每日奖励领取标记
+}
+
+message PB_WorldArenaUserScheduleData {
+	optional int64 group_id = 1;
+	repeated int64 schedule_list = 2;
+}
+
+message PB_WorldArenaUserData {
+	optional PB_WorldArenaUserSignupData signup_data = 1;
+	optional PB_WorldArenaUserScoreData score_data = 2;
+	optional PB_WorldArenaUserScheduleData schedule_data = 3;
+	optional PB_RoleBattleData role_battle_data = 4;
+}

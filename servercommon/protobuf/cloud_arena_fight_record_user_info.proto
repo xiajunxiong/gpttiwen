@@ -1,0 +1,13 @@
+message PB_CloudArenaFightRecordUserInfo {
+    optional int32 uid = 1;
+    optional int32 level = 2;
+    optional int32 profession = 3;
+    optional int32 avatar = 4;
+    optional int32 headshot_id = 5;
+    optional string name = 6;
+    optional int32 change_score = 7;
+    optional int32 change_arena_coin = 8;
+    optional int32 new_rank = 9;
+	optional int32 old_score = 10;
+	optional int32 old_rank = 11;
+}

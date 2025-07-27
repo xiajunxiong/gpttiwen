@@ -1,0 +1,9 @@
+import "cloud_arena_fight_record_user_info.proto";
+
+message PB_CloudArenaFightRecord {
+    optional int64 record_id = 1;
+	optional uint32 record_timestamp = 2;
+	optional bool is_attacker_win = 3;
+    optional PB_CloudArenaFightRecordUserInfo attacker_info = 4;
+    optional PB_CloudArenaFightRecordUserInfo defender_info = 5;
+}

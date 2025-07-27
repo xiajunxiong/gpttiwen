@@ -1,0 +1,30 @@
+﻿  chatserverdef.cpp
+  guilddef.cpp
+  hongbaodef.cpp
+  matchengine.cpp
+  matchmanager.cpp
+E:\server\src\servercommon\matchmanager\matchengine.cpp(4,10): error C1083: 无法打开包括文件: “engineadapter.h”: No such file or directory
+  battle_character_data.pb.cc
+  cloud_arena_fight_record.pb.cc
+  cloud_arena_fight_record_user_info.pb.cc
+  partner_battle_data.pb.cc
+  pet_battle_data.pb.cc
+  platform_battle_partner.pb.cc
+  platform_battle_pet.pb.cc
+  platform_battle_role_data.pb.cc
+  role_battle_data.pb.cc
+  battlecharacterdatavermgr.cpp
+  servercommon.cpp
+E:\server\src\servercommon\servercommon.cpp(21,11): error C1083: 无法打开包括文件: “unistd.h”: No such file or directory
+  configstruct.cpp
+  localconfig.cpp
+  openserverconfig.cpp
+E:\server\src\servercommon\serverconfig\openserverconfig.cpp(103,34): warning C4244: “初始化”: 从“const time_t”转换到“unsigned int”，可能丢失数据
+E:\server\src\servercommon\serverconfig\openserverconfig.cpp(120,34): warning C4244: “初始化”: 从“const time_t”转换到“unsigned int”，可能丢失数据
+  serverconfigpool.cpp
+  正在生成代码...
+  正在编译...
+  gamestring.cpp
+  platformbattleparam.cpp
+  uniqueidgenerator.cpp
+  正在生成代码...

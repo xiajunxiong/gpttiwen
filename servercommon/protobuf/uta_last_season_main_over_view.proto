@@ -1,0 +1,13 @@
+message PB_UTAMainOverviewSchedule {
+	optional int32 overview_type = 1;
+	optional int64 atk_team_unique_id = 2;
+	optional int64 def_team_unique_id = 3;
+	optional string atk_team_name = 4;
+	optional string def_team_name = 5;
+	optional int32 fight_result = 6;
+	optional int64 video_id = 7;
+}
+
+message PB_UTAMainOverviewScheduleList {
+	repeated PB_UTAMainOverviewSchedule schedule_list = 2;
+}

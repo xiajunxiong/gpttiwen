@@ -1,0 +1,302 @@
+/******************************************************************************************
+FileName: roleotherparam.hpp
+Author: dreamwang
+Description: 角色打包数据统一管理 用于存储各种打包的数据 各个系统自己做版本兼容 用于复杂的系统
+Version: 1.0
+History: 
+<author>    <time>					<version >    <desc>
+dreamwang   2012/02/3/ 10:49:05     1.0           创建
+*****************************************************************************************/
+
+#ifndef __ROLE_OTHER_INIT_PARAM_HPP__
+#define __ROLE_OTHER_INIT_PARAM_HPP__
+
+#include <string>
+
+#include "common/tlvprotocol.h"
+#include "servercommon/shopdef.h"
+#include "servercommon/buffdef.hpp"
+#include "servercommon/guilddef.hpp"
+#include "servercommon/basedef.h"
+#include "servercommon/monitordef.hpp"
+#include "servercommon/commondata.hpp"
+#include "servercommon/vipdef.hpp"
+#include "servercommon/attributedef.hpp"
+#include "servercommon/struct/moneyotherdef.h"
+#include "servercommon/struct/itemlistparam.h"
+#include "servercommon/prestigedef.hpp"
+#include "servercommon/partnerdef.h"
+#include "servercommon/collectiondef.hpp"
+#include "servercommon/titledef.hpp"
+#include "servercommon/traindef.hpp"
+#include "servercommon/taskdef.h"
+#include "servercommon/workshopdef.h"
+#include "servercommon/struct/skilllistparam.hpp"
+#include "servercommon/surfacedef.hpp"
+#include "servercommon/marrydef.hpp"
+#include "servercommon/babydef.hpp"
+#include "servercommon/frienddef.hpp"
+#include "servercommon/rolesettingdef.hpp"
+#include "servercommon/shitudef.h"
+#include "servercommon/couragechallengedef.hpp"
+#include "servercommon/monsterwavedef.hpp"
+#include "servercommon/roleactivitydef.hpp"
+#include "servercommon/miyidef.hpp"
+#include "servercommon/schooltaskdef.h"
+#include "servercommon/treasuremapdef.hpp"
+#include "servercommon/fabaodef.hpp"
+#include "servercommon/taskchaindef.h"
+#include "servercommon/researchtaskdef.h"
+#include "servercommon/fabaodef.hpp"
+#include "servercommon/medaldef.h"
+#include "servercommon/rolecrystalfbdef.h"
+#include "servercommon/mapunlockdef.h"
+#include "servercommon/rolegatherfbdef.h"
+#include "servercommon/exchangedef.h"
+#include "servercommon/rolecrossdef.hpp"
+#include "servercommon/courseofgrowthdef.h"
+#include "servercommon/salarydef.hpp"
+#include "servercommon/rolechallengefbdef.hpp"
+#include "servercommon/facescoredef.h"
+#include "servercommon/funcguidedef.h"
+#include "servercommon/roleconvertshopparam.hpp"
+#include "servercommon/specialappearancedef.hpp"
+#include "servercommon/roledropdef.hpp"
+#include "servercommon/loginsystemdef.hpp"
+#include "servercommon/bosschapterdef.hpp"
+#include "servercommon/mysterioustrialdef.hpp"
+#include "servercommon/bountytaskdef.hpp"
+#include "servercommon/transactiontaskdef.hpp"
+#include "servercommon/activesystemdef.hpp"
+#include "servercommon/huashendef.hpp"
+#include "servercommon/funcpreviewdef.h"
+#include "servercommon/auto_catch_pet_def.hpp"
+#include "servercommon/trade_credit_def.hpp"
+#include "servercommon/formationdef.hpp"
+#include "servercommon/gatherdreamdef.hpp"
+#include "servercommon/rolehuanjiedef.hpp"
+#include "servercommon/anecdotetaskdef.hpp"
+#include "servercommon/dreamnoteschallengedef.hpp"
+#include "servercommon/schoolexercisedef.hpp"
+#include "servercommon/lunhuiwangchuandef.h"
+#include "servercommon/smartmountssystemdef.hpp"
+#include "servercommon/realmbreakdef.hpp"
+#include "servercommon/petmonopolydef.hpp"
+#include "servercommon/rolematerialdef.hpp"
+#include "servercommon/mapexplorationdef.hpp"
+#include "servercommon/rolejoinactivityrewardparam.hpp"
+#include "servercommon/custominstructiondef.hpp"
+#include "servercommon/roleguildinborndef.hpp"
+#include "servercommon/roleheartskilldef.hpp"
+#include "servercommon/pethelperformationdef.hpp"
+#include "servercommon/netherworldgatorydef.h"
+#include "servercommon/petgodfbdef.hpp"
+#include "servercommon/bigdipperdef.h"
+#include "servercommon/tiandidaohendef.hpp"
+#include "servercommon/prestigetaskdef.hpp"
+#include "servercommon/roleattrpelletdef.hpp"
+#include "servercommon/dueldef.h"
+#include "servercommon/struct/tianmingparam.h"
+#include "servercommon/dujiedef.hpp"
+#include "servercommon/yinyangeyedef.h"
+#include "servercommon/wanlingfbdef.hpp"
+#include "servercommon/struct/advancecareerparam.hpp"
+#include "servercommon/rolenewlifeskilldef.hpp"
+#include "servercommon/flyupsystemdef.h"
+#include "servercommon/mirageterritorydef.h"
+#include "servercommon/struct/xiuweiparam.hpp"
+#include "servercommon/treasuretaskdef.h"
+#include "servercommon/rolepetpartnerdef.hpp"
+#include "servercommon/minigamedef.hpp"
+#include "servercommon/peaktokendef.hpp"
+#include "servercommon/incomedef.hpp"
+#include "servercommon/levelcomplementdef.hpp"
+#include "servercommon/yaoxingshiliandef.hpp"
+#include "servercommon//cycleactivity/lanternriddieparam.hpp"
+#include "servercommon/cycleactivity/loversmarketparam.hpp"
+#include "servercommon/taoquannajidef.hpp"
+#include "servercommon/cycleactivity/concentricknotparam.hpp"
+#include "servercommon/hongmengtianjiedef.hpp"
+#include "servercommon/zaohuaequipdef.hpp"
+#include "servercommon/holyequipdef.h"
+#include "servercommon/cycleactivity/kejuexamparam.hpp"
+#include "servercommon/cycleactivity/zhouqishopparam.hpp"
+#include "servercommon/elementelfdef.hpp"
+#include "servercommon/fuyudef.h"
+#include "servercommon/struct/global/kuafuyingxiongludef.hpp"
+#include "servercommon/dayrewarddef.hpp"
+#include "servercommon/starchartdef.h"
+#include "servercommon/newcouragechallengedef.hpp"
+#include "servercommon/fashioncollectiondef.h"
+#include "servercommon/roleguildtaskdef.hpp"
+#include "servercommon/huanshoudef.hpp"
+
+class RoleOtherInitParam
+{
+public:
+	bool Serialize(TLVSerializer &outstream) const;
+	bool Unserialize(TLVUnserializer &instream);
+
+	MonitorParam monitor_param;
+	CommonDataParam common_data_param;
+	VipParam vip_param;
+	AttributePlanParam attribute_plan_param;
+	MoneyOtherParam	money_other_param;
+	KnapsackOtherParam knapsack_other_param;
+	NewPrestigeParam prestige_param;
+	PartnerParam partner_param;
+	CollectionParam collection_param;
+	TitleParam title_param;
+	TrainParam train_param;
+	TaskParam task_param;
+	SkillOtherParam skill_other_param;
+	EquipmentOtherParam equip_pther_param;
+	WorkShopParam workshop_param;
+	SurfaceParam surface_param;
+	RoleBabyParam role_baby_param;
+	MarriageParam marry_param;
+	FriendCommonParam friend_common_param;
+	GuildCommonParam guild_common_param;
+	RoleSetSystemParam role_system_set_param;
+	ShiTuParam shi_tu_param;
+	CourageChallengeParam courage_challenge_param;
+	MonsterWaveParam monster_wave_param;
+	MiYiParam mi_yi_param;
+	SchoolTaskParam school_task_param;
+	RoleActivityCommonParam roleactivity_common_param;
+	TreasureMapParam treasure_map_param;
+	TaskChainParam task_chain_param;
+	FaBaoParam fabao_param;
+	ResearchTaskParam research_task_param;
+	MedalCommonParam medal_param;
+	RoleCrystalParam role_crystal_fb;
+	BuffListParam buff_param;
+	ShopParam shop_param;
+	TaskTraceParam task_trace_param;
+	MapUnlockParam map_unlock_param;
+	RoleGatherFbParam role_gather_fb_param;
+	ExchangeParam exchange_param;
+	RoleCrossParam rolecross_param;
+	CourseOfGrowthParam course_of_growth_param;
+	SalaryParam salary_param;
+	ChallengeFbParam challenge_fb_param;
+	FaceScoreParam face_score_param;
+	Appearance appearance_param;
+	FuncGuideParam func_guide_param;
+	RoleConvertShopParam convert_shop_param;
+	SpecialAppearanceParam special_appearance_param;
+	RoleDropParam role_drop_param;
+	MonsterGroupDropParam monster_group_drop_param;
+	LoginSystemParam role_login_system_param;
+	BossChapterParam boss_chapter_param;
+	MysteriousTrialParam role_mysterious_trial_param;
+	BountyTaskParam bounty_task_param;
+	TransactionTaskParam role_transaction_task_param;
+	PetCommonParam pet_common_param;
+	ActiveSystemParam role_active_system_param;
+	TaskChosedParam role_chosed_param;
+	HuaShenParam role_huashen_param;
+	FuncPreviewParam func_preview_param;
+	AutoCatchPetParam auto_catch_pet_param;
+	TradeCreditParam trade_credit_param;
+	PetSkinParam pet_skin_param;
+	FaceScoreTimeParam face_score_time_param;
+	FormationParam formation_param;
+	GatherDreamParam gather_dream_param;
+	RoleHuanJieParam role_huan_jie_param;
+	AnecdoteTaskCommonParam anecdote_task_common_param;
+	AnecdoteTaskParam anecdote_task_param;
+	TaskWenXiangLouFbParam task_wenxianglou_param;
+	DreamNotesChallengeParam dream_notes_challenge_param;
+	SchoolExerciseParam school_exercise_param;
+	PetAutoMoveParam pet_auto_move_param;
+	SmartMountsSystemParam smart_mounts_system_param;
+	RealmBreakParam realm_break_param;
+	PetMonopolyParam old_pet_monopoly_param;
+	LunHuiWangChuanParam lun_hui_wang_chuan_param;
+	MaterialParam role_material_param;
+	FaBaoDrawParam fabao_draw_param;
+	MapExplorationParam map_exploration_param;
+	RoleJoinActivityRewardParam role_join_activity_reward_param;
+	CustomInstructionParam custom_instruction_param;
+	RoleGuildInbornParam role_guild_inborn_param;
+	NewPartnerParam new_partner_param;
+	HeartSkillParam m_heart_skill_param;
+	PetHelperFormationParam pet_helper_formation_param;
+	GodPrintBagParam god_print_bag_param;
+	GodPrintBagWishLogParam god_print_log_param;
+	NetherWorldGatoryParam nether_world_gatory_param;
+	PetGodFBParam pet_god_fb_param;
+	ActiveDegreeBaseParam week_base_param;
+	ActiveDegreeTaskParam week_task_param;
+	BigDipperParam big_dipper_param;
+	RoleTianDiDaoHenParam tian_di_dao_hen_param;
+	PrestigeTaskParam prestige_task_param;
+	PartnerGiftTreeParam partner_gift_tree_param;
+	RoleAttrPelletParam role_attr_pellet_param;
+	ActiveTurntableParam active_turntable_param;
+	PartnerSpiritPactParam partner_pact_param;
+	DuelParam duel_param;
+	TianMingParam tian_ming_param;
+	DuJieParam du_jie_param;
+	YinYangEyeParam yin_yang_eye_param;
+	BigDipperHelpParam big_dipper_help_param;
+	RoleCourseParam role_course_param;
+	AdvanceCareerParam	advance_career_param;
+	WanLingFBParam wan_ling_fb_param;
+	RoleNewLifeSkillParam role_new_life_skill_param;
+	FlyUpSystemParam role_fly_up_param;
+	MirageTerritoryParam role_mirage_territory_param;
+	XiuWeiParam xiu_wei_param;
+	TreasureTaskParam treasure_task_param;
+	RolePetInfoParam role_pet_info_param;
+	RolePartnerInfoParam role_partner_info_param;
+	FallenGodParam fallen_god_param;
+	FallenGodHelpParam fallen_god_help_param;
+	MiniGameParam mini_game_param;
+	RoleMirageTerritoryPartnerInfoParam role_mirage_territory_info_param;
+	RolePeakTokenParam role_peak_token_param;
+	RoleIncomeParam role_income_param;
+	RoleNewLevelComplementParam new_level_complement_param;
+	NewPetMonopolyParam new_pet_monopoly_param;
+	YaoXingShiLianParam yao_xing_shi_lian_param;
+	SALanternRiddieParam lantern_riddie_param;
+	LoversMarketParam lovers_market_param;
+	ConcentricKnotParam concentric_knot_param;
+	TaoQuanNaJiParam tao_quan_na_ji_param;
+	RoleHongMengTianJieParam role_hongmeng_tianjie_param;
+	ZaoHuaRefineParam zao_hua_refine_param;
+	ZaoHuaLongZhuParam zao_hua_long_zhu_param;
+	HolyEquipCommonParam role_holy_equip_common_param;
+	ItemCoolDownDropParam item_cool_down_drop_param;
+	KeJuExamParam role_ke_ju_exam_param;
+	ZhouQiShopParam zhou_qi_shop_param;
+	PetStrengthenBuffParam pet_strengthen_buff_param;
+	ElementElfParam element_elf_param;
+	FuYuCommonParam fu_yu_common_param;
+	RoleKuaFuYingXiongParam role_kua_fu_ying_xiong_lu_param;
+	RoleDayRewardParam role_day_reward_param;
+	StarChartParam star_chart_param;
+	NewCourageChallengeParam new_courage_challenge_param;
+	FashionCollectionParam fashion_collection_param;
+	NewGodPrintBagWishLogParam new_god_print_log_param;
+	RoleGuildTaskParam role_guild_task_param;
+	SpecialAnecdoteParam special_anecdote_param;
+	RoleHuanShouParam role_huan_shou_param;
+
+	/////////////////////////////////////////////////////////
+
+	int taskrecrod_len;
+	char taskrecord_list[MAX_TASK_RECORD_LEN];
+	UNSTD_STATIC_CHECK(MAX_TASK_RECORD_LEN * 2 < 20000)
+
+	int course_of_growth_len;
+	char course_of_growth_list[MAX_COG_RECORD_LEN];
+	UNSTD_STATIC_CHECK(MAX_COG_RECORD_LEN * 2 < 8192)
+
+	int face_score_record_len;
+	char face_score_record_list[MAX_FACE_RECORD_LEN];
+	UNSTD_STATIC_CHECK(MAX_FACE_RECORD_LEN * 2 < 16384);
+};
+
+#endif // __ROLE_OTHER_INIT_PARAM_HPP__

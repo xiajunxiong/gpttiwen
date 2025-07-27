@@ -1,0 +1,17 @@
+message PB_UTABaseData {
+	optional int32 cur_status = 1;						//!< 当前状态
+	optional int32 season_index = 2;					//!< 赛季号
+	optional int32 qualification_round_idx = 3;			//!< 资格赛轮数
+	optional int32 main_round_idx = 4;					//!< 正赛轮数
+	optional uint32 next_status_timestamp = 5;			//!< 下个状态变化时间戳
+	optional uint32 prepare_status_timestamp = 6;		//!< 准备阶段时间戳
+	optional uint32 qualification_status_timestamp = 7;	//!< 资格赛阶段时间戳
+	optional uint32 main_status_timestamp = 8;			//!< 正赛阶段时间戳
+	optional uint32 calculate_status_timestamp = 9;		//!< 结算阶段时间戳
+	optional uint32 rest_status_timestamp = 10;			//!< 休赛阶段时间戳
+	optional uint32 qualification_round_timestamp = 11;	//!< 当前轮资格赛时间戳
+	optional uint32 main_round_timestamp = 12;			//!< 当前轮正赛时间戳
+	repeated uint32 qualification_timestamp_list = 13;	//!< 资格赛各轮次时间戳
+	repeated uint32 main_timestamp_list = 14;			//!< 正赛各轮次时间戳
+}
+

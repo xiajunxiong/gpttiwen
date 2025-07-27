@@ -1,0 +1,9 @@
+import "partner_battle_data.proto";
+
+message PB_PlatformBattlePartner {
+    optional int32 pos = 1;
+    optional int32 level = 2;
+    optional int32 partner_id = 3;
+    optional int32 capability = 4;
+    optional PB_PartnerBattleData partner_battle_data = 5;
+}

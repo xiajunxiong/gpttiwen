@@ -1,0 +1,19 @@
+import "battle_character_data.proto";
+
+message PB_PetBattleData {
+    optional PB_BattleCharacterData battle_data = 1;
+    repeated int32 passive_list = 2;
+    optional int32 auto_move_type = 3;
+    optional int32 auto_skill_id = 4;
+    optional int32 auto_skill_level = 5;
+    optional int32 exclusive_passive_skill_OBSOLETE = 6;
+	optional int32 skin_id = 7;
+	repeated int32 other_sp_list = 8;
+	optional int64 unique_id = 9;
+	repeated int32 passive_level_list = 10;
+	optional int32 lianyao_pet_id = 11;
+	optional int32 lianyao_pet_str_lv = 12;
+	optional int32 pet_exclusive_skill_disable_flag = 13;
+	optional int32 lian_yao_exclusive_skill_disable_flag = 14;	
+}
+

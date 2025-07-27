@@ -1,0 +1,25 @@
+message PB_UTATeamMemberData {
+	optional int64 uuid = 1;				//!< 主角唯一ID
+	optional int32 uid = 2;					//!< 主角ID 
+	optional int32 profession = 3;			//!< 职业
+	optional int32 level = 4;				//!< 等级
+	optional int32 top_level = 5;			//!< 巅峰等级
+	optional int32 avatar_type = 6;			//!< 模型
+	optional int32 headshot_id = 7;			//!< 头像
+	optional int32 fly_flag = 8;			//!< 飞升标记
+	optional int32 capability = 9;			//!< 战力
+	optional string role_name = 10;			//!< 玩家名
+	optional bytes appearance = 11;			//!< 角色形象
+	optional int32 today_reward_num = 12;	//!< 今天领取了多少次奖励
+	optional int32 win_box_fetch_flag = 13;	//!< 胜场宝箱领取标记（二进制）
+}
+
+message PB_UTATeamData {
+	optional int32 plat_type = 1;			//!< 渠道号
+	optional int64 team_unique_id = 2;		//!< 队伍唯一ID
+	optional string team_name = 3;			//!< 队伍名
+	repeated PB_UTATeamMemberData member_list = 4; //!< 队员列表
+	optional int32 hidden_idx = 5;			//!< 隐藏服的序号
+	optional int64 team_id_in_hidden = 6;	//!< 在隐藏服的队伍ID
+}
+

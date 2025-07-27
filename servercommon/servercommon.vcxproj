@@ -1,0 +1,211 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\include\common\platform\thread\event.h" />
+    <ClInclude Include="..\..\include\common\platform\thread\mutex.h" />
+    <ClInclude Include="..\..\include\common\platform\thread\semaphore.h" />
+    <ClInclude Include="..\..\include\common\platform\thread\thread.h" />
+    <ClInclude Include="..\..\include\common\platform\thread\threadqueue.h" />
+    <ClInclude Include="..\..\include\common\platform\thread\threadqueueex.h" />
+    <ClInclude Include="..\..\include\common\platform\thread\tlskey.h" />
+    <ClInclude Include="basedef.h" />
+    <ClInclude Include="chatserverdef.h" />
+    <ClInclude Include="commondata.hpp" />
+    <ClInclude Include="courseofgrowthdef.h" />
+    <ClInclude Include="crossdef.hpp" />
+    <ClInclude Include="darmi\dacross.hpp" />
+    <ClInclude Include="darmi\daglobal.hpp" />
+    <ClInclude Include="darmi\dalogin.h" />
+    <ClInclude Include="darmi\damodule.h" />
+    <ClInclude Include="darmi\darole.h" />
+    <ClInclude Include="darmi\dasystem.h" />
+    <ClInclude Include="errornum.h" />
+    <ClInclude Include="guilddef.hpp" />
+    <ClInclude Include="hongbaodef.hpp" />
+    <ClInclude Include="logindef.h" />
+    <ClInclude Include="matchmanager\imatchlogic.hpp" />
+    <ClInclude Include="matchmanager\matchdef.hpp" />
+    <ClInclude Include="matchmanager\matchengine.hpp" />
+    <ClInclude Include="matchmanager\matchmanager.hpp" />
+    <ClInclude Include="matchmanager\matchqueue.hpp" />
+    <ClInclude Include="protobuf\battle_character_data.pb.h" />
+    <ClInclude Include="protobuf\cloud_arena_fight_record.pb.h" />
+    <ClInclude Include="protobuf\cloud_arena_fight_record_user_info.pb.h" />
+    <ClInclude Include="protobuf\partner_battle_data.pb.h" />
+    <ClInclude Include="protobuf\pet_battle_data.pb.h" />
+    <ClInclude Include="protobuf\platform_battle_partner.pb.h" />
+    <ClInclude Include="protobuf\platform_battle_pet.pb.h" />
+    <ClInclude Include="protobuf\platform_battle_role_data.pb.h" />
+    <ClInclude Include="protobuf\role_battle_data.pb.h" />
+    <ClInclude Include="roleactivity\rayunzebloomingrecordparam.hpp" />
+    <ClInclude Include="roleactivity\rayunzeslotmachineparam.hpp" />
+    <ClInclude Include="roleactivity\rayunzeterritoryparam.hpp" />
+    <ClInclude Include="roleattrvermanager\battlecharacterdatavermgr.h" />
+    <ClInclude Include="rolecrystalfbdef.h" />
+    <ClInclude Include="servercommon.h" />
+    <ClInclude Include="serverconfig\configstruct.h" />
+    <ClInclude Include="serverconfig\localconfig.hpp" />
+    <ClInclude Include="serverconfig\openserverconfig.hpp" />
+    <ClInclude Include="serverconfig\serverconfigpool.h" />
+    <ClInclude Include="serverdef.h" />
+    <ClInclude Include="skiplist.hpp" />
+    <ClInclude Include="string\crossstr.h" />
+    <ClInclude Include="string\gameworldstr.h" />
+    <ClInclude Include="string\globalstr.h" />
+    <ClInclude Include="struct\global\platformbattleparam.hpp" />
+    <ClInclude Include="struct\mailparam.hpp" />
+    <ClInclude Include="uniqueidgenerator.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="chatserverdef.cpp" />
+    <ClCompile Include="guilddef.cpp" />
+    <ClCompile Include="hongbaodef.cpp" />
+    <ClCompile Include="matchmanager\matchengine.cpp" />
+    <ClCompile Include="matchmanager\matchmanager.cpp" />
+    <ClCompile Include="protobuf\battle_character_data.pb.cc" />
+    <ClCompile Include="protobuf\cloud_arena_fight_record.pb.cc" />
+    <ClCompile Include="protobuf\cloud_arena_fight_record_user_info.pb.cc" />
+    <ClCompile Include="protobuf\partner_battle_data.pb.cc" />
+    <ClCompile Include="protobuf\pet_battle_data.pb.cc" />
+    <ClCompile Include="protobuf\platform_battle_partner.pb.cc" />
+    <ClCompile Include="protobuf\platform_battle_pet.pb.cc" />
+    <ClCompile Include="protobuf\platform_battle_role_data.pb.cc" />
+    <ClCompile Include="protobuf\role_battle_data.pb.cc" />
+    <ClCompile Include="roleattrvermanager\battlecharacterdatavermgr.cpp" />
+    <ClCompile Include="servercommon.cpp" />
+    <ClCompile Include="serverconfig\configstruct.cpp" />
+    <ClCompile Include="serverconfig\localconfig.cpp" />
+    <ClCompile Include="serverconfig\openserverconfig.cpp" />
+    <ClCompile Include="serverconfig\serverconfigpool.cpp" />
+    <ClCompile Include="string\gamestring.cpp" />
+    <ClCompile Include="struct\global\platformbattleparam.cpp" />
+
+    <ClCompile Include="uniqueidgenerator.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="protobuf\battle_character_data.proto" />
+    <None Include="protobuf\cloud_arena_fight_record.proto" />
+    <None Include="protobuf\cloud_arena_fight_record_user_info.proto" />
+    <None Include="protobuf\partner_battle_data.proto" />
+    <None Include="protobuf\pet_battle_data.proto" />
+    <None Include="protobuf\platform_battle_partner.proto" />
+    <None Include="protobuf\platform_battle_pet.proto" />
+    <None Include="protobuf\platform_battle_role_data.proto" />
+    <None Include="protobuf\role_battle_data.proto" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{E175EB3A-B48F-49E5-AE43-C1B9E7A6B970}</ProjectGuid>
+    <RootNamespace>servercommon</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>../../include;./gameworld;..;.;../../3rdpart/lua5.1;../../3rdpart/tolua++/src;../../3rdpart/mysqlconnector/v32/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

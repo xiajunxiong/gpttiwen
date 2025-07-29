@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="source">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="protocal">
+      <UniqueIdentifier>{b1c6bac3-41f5-41d1-a376-67bcc03033ff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="serverconfig">
+      <UniqueIdentifier>{0ff38f00-c567-47d6-9a91-bb67ea51fb17}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="engineadapter.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="gatewaymodule.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="internalcomm.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\servercommon\servercommon.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\servercommon\serverconfig\configstruct.cpp">
+      <Filter>serverconfig</Filter>
+    </ClCompile>
+    <ClCompile Include="..\servercommon\serverconfig\serverconfigpool.cpp">
+      <Filter>serverconfig</Filter>
+    </ClCompile>
+    <ClCompile Include="..\servercommon\tinyxml\tinyxml_adapter.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\servercommon\tinyxml\tinyxml2.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="msgcpp.cpp">
+      <Filter>protocal</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="engineadapter.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="gatewaymodule.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="internalcomm.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\servercommon\servercommon.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\servercommon\internalprotocal\lwprotocal.h">
+      <Filter>protocal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\servercommon\internalprotocal\wgprotocal.h">
+      <Filter>protocal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\servercommon\serverconfig\configstruct.h">
+      <Filter>serverconfig</Filter>
+    </ClInclude>
+    <ClInclude Include="..\servercommon\serverconfig\serverconfigpool.h">
+      <Filter>serverconfig</Filter>
+    </ClInclude>
+    <ClInclude Include="..\servercommon\tinyxml\tinyxml_adapter.hpp" />
+    <ClInclude Include="..\servercommon\tinyxml\tinyxml2.h" />
+    <ClInclude Include="..\servercommon\userprotocal\msgsystem.h">
+      <Filter>protocal</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

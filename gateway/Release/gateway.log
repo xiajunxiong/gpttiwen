@@ -1,0 +1,15 @@
+﻿  servercommon.cpp
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\dbghelp.h(1544): warning C4091: 'typedef ': ignored on left of '' when no variable is declared
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\dbghelp.h(3190): warning C4091: 'typedef ': ignored on left of '' when no variable is declared
+  configstruct.cpp
+  serverconfigpool.cpp
+  tinyxml2.cpp
+  tinyxml_adapter.cpp
+  engineadapter.cpp
+  gatewaymodule.cpp
+E:\workspace\unity\t6ys\server\include\common/platform/socket/pisocket.h(39): warning C4005: 'EWOULDBLOCK': macro redefinition
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\errno.h(124): note: see previous definition of 'EWOULDBLOCK'
+  internalcomm.cpp
+  main.cpp
+  msgcpp.cpp
+LINK : fatal error LNK1181: cannot open input file 'gameserver.lib'

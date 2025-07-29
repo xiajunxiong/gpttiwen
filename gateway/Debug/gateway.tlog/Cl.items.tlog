@@ -1,0 +1,10 @@
+E:\server\src\servercommon\servercommon.cpp;E:\server\src\gateway\Debug\servercommon.obj
+E:\server\src\servercommon\serverconfig\configstruct.cpp;E:\server\src\gateway\Debug\configstruct.obj
+E:\server\src\servercommon\serverconfig\serverconfigpool.cpp;E:\server\src\gateway\Debug\serverconfigpool.obj
+E:\server\src\servercommon\tinyxml\tinyxml2.cpp;E:\server\src\gateway\Debug\tinyxml2.obj
+E:\server\src\servercommon\tinyxml\tinyxml_adapter.cpp;E:\server\src\gateway\Debug\tinyxml_adapter.obj
+E:\server\src\gateway\engineadapter.cpp;E:\server\src\gateway\Debug\engineadapter.obj
+E:\server\src\gateway\gatewaymodule.cpp;E:\server\src\gateway\Debug\gatewaymodule.obj
+E:\server\src\gateway\internalcomm.cpp;E:\server\src\gateway\Debug\internalcomm.obj
+E:\server\src\gateway\main.cpp;E:\server\src\gateway\Debug\main.obj
+E:\server\src\gateway\msgcpp.cpp;E:\server\src\gateway\Debug\msgcpp.obj

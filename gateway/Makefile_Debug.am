@@ -1,0 +1,20 @@
+AUTOMAKE_OPTIONS = foreign
+
+noinst_PROGRAMS = EXEgateway_debug
+
+#release版本
+#CXXFLAGS = -O0 -g -Wall
+
+#debug版本
+CXXFLAGS = -O0 -g3 -Wall -D_DEBUG
+
+INCLUDES = -I$(INCLUDE_PATH)/ -I$(LIB_LINUX_PATH)/ -I$(ENGINE_SERVER_DIR)/
+
+ADDCPP = 
+ADDDIRS = ./servercommon/
+
+EXEgateway_debug_SOURCES = engineadapter.cpp gatewaymodule.cpp internalcomm.cpp main.cpp .././servercommon/serverconfig/serverconfigpool.cpp .././servercommon/serverconfig/configstruct.cpp
+
+EXEgateway_debug_LDADD = $(LIB_LINUX_PATH)/libgameserver.a $(LIB_LINUX_PATH)/libcommon.a $(LIB_LINUX_PATH)/libutility.a $(LIB_LINUX_PATH)/libutility.a
+
+EXEgateway_debug_LDFLAGS = -L$(LIB_LINUX_PATH)/ -lpthread -lrt  -llog -lconfig  -lnetwork -lrmi

@@ -51,6 +51,7 @@ function SCCreateRoleAck:Decode()
 	self.avatar_type = MsgAdapter.ReadChar()
 	self.color = MsgAdapter.ReadChar()
 	self.create_role_time = MsgAdapter.ReadLL()
+	LogError("SCCreateRoleAck:Decode, result:"..tostring(self.result).."_role_id:"..tostring(self.role_id).."_role_name:"..tostring(self.role_name).."_avatar_type:"..tostring(self.avatar_type).."_color:"..tostring(self.color).."_create_role_time:"..tostring(self.create_role_time))
 end
 
 -- 角色请求

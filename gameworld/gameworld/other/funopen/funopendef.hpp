@@ -1,0 +1,130 @@
+#ifndef __FUN_OPEN_DEF_HPP__
+#define __FUN_OPEN_DEF_HPP__
+
+enum FUN_TYPE
+{
+	FUN_TYPE_INVALID = 0,
+	FUN_TYPE_CHAT = 1,					//!< 聊天
+	FUN_TYPE_FRIEND = 2,				//!< 朋友
+	FUN_TYPE_TEAM = 3,					//!< 组队
+	FUN_TYPE_PROF_ADVANCE = 4,			//!< 转职
+	FUN_TYPE_PET = 5,					//!< 宠物
+	FUN_TYPE_PARTNER = 6,				//!< 伙伴
+	FUN_TYPE_PARTNER_JINJIE = 7,		//!< 伙伴进阶
+	FUN_TYPE_PARTNER_MINGGE = 8,		//!< 伙伴命格
+	FUN_TYPE_ROLE_SKILL_UPLEVEL = 9,	//!< 角色技能升级
+	FUN_TYPE_QINGYUAN = 10,				//!< 情缘
+	FUN_TYPE_FABAO = 11,				//!< 法宝
+	FUN_TYPE_LINGSHI = 12,				//!< 灵饰
+	FUN_TYPE_TITLE = 13,				//!< 称号
+	FUN_TYPE_ACHIEVEMENT = 14,			//!< 成就
+	FUN_TYPE_MARRIGE = 15,				//!< 结婚
+	FUN_TYPE_COLLECTION = 16,			//!< 图鉴
+	FUN_TYPE_XIULIAN = 17,				//!< 修炼 
+	FUN_TYPE_MEDAL = 18,				//!< 勋章
+	FUN_TYPE_SHITU = 19,				//!< 师徒
+	FUN_TYPE_BABY = 20,					//!< 子女
+	FUN_TYPE_ZHENZHONG_RESERCH = 21,	//!< 真中的研究
+	FUN_TYPE_COURAGE_CHALLENGE = 22,	//!< 勇气的挑战
+	FUN_TYPE_ANSWER = 23,				//!< 万事通答题
+	FUN_TYPE_CHALLENGE_FB = 24,			//!< 挑战副本 ？
+	FUN_TYPE_ESCORT = 25,				//!< 运镖
+	FUN_TYPE_WISH_POOL = 26,			//!< 许愿池
+	FUN_TYPE_XUNBAO = 27,				//!< 寻宝
+	FUN_TYPE_GATHER = 28,				//!< 采集 
+	FUN_TYPE_GUILD = 29,				//!< 家族 
+	FUN_TYPE_PLATFORM = 30,				//!< 擂台 
+	FUN_TYPE_HUANHUA = 31,				//!< 幻化 ?
+	FUN_TYPE_CRYSTAL_FB = 32,			//!< 水晶副本 
+	FUN_TYPE_MAZE_RACE = 33,			//!< 迷宫竞速 
+	FUN_TYPE_DEMON_CAVE = 34,			//!< 魔窟
+	FUN_TYPE_MIYI = 35,					//!< 密医
+	FUN_TYPE_TASK_CHAIN = 36,			//!< 任务链
+	FUN_TYPE_SQUARD_FIGHT = 37,			//!< 小队竞技
+	FUN_TYPE_KNAPSACK = 38,				//!< 背包
+	FUN_TYPE_WORKSHOP = 39,				//!< 工坊
+	FUN_TYPE_SHOP = 40,					//!< 商城
+	FUN_TYPE_WORLD_BOSS = 41,			//!< 世界boss
+	FUN_TYPE_CHIEF_ELETION = 42,		//!< 首席竞选
+	FUN_TYPE_CHIEF_PEAK = 43,			//!< 首席巅峰战
+	FUN_TYPE_GUILD_LUANDOU = 44,		//!< 家族大乱斗
+	FUN_TYPE_BRAVE_GROUND = 45,			//!< 勇闯地宫
+	FUN_TYPE_SCHOOL_TASK = 46,			//!< 门派任务
+	FUN_TYPE_TREASURE_MAP_TASK = 47,	//!< 宝图任务
+	FUN_TYPE_COLOSSEUM = 48,			//!< 古神宝库
+	FUN_TYPE_EXP_CRYSTAL = 49,			//!< 打卡水晶
+	FUN_TYPE_SMELT = 50,				//!< 工坊熔炼
+	FUN_TYPE_MYSTERIOUS_TRIAL = 51,		//!< 神秘试炼
+	FUN_TYPE_TRANSACTION_TASK = 52,		//!< 购买任务(每日任务) - 丝绸之路(远洋贸易)
+	FUN_TYPE_ACTIVE_SYSTEM = 53,		//!< 活跃系统
+	FUN_TYPE_FANTASY_FB = 54,			//!< 四象幻境
+	FUN_TYPE_WORLD_ANSWER = 55,			//!< 世界答题
+	FUN_TYPE_BOUNTY_TASK = 56,			//!< 赏金任务
+	FUN_TYPE_EXPEL_MONSTER = 57,		//!< 驱除妖兽
+	FUN_TYPE_WORLD_BOSS_2 = 58,			//!< 世界boss2（巨龙boss）
+	FUN_TYPE_ONLY_FIGHT = 59,			//!< 以一敌百(个人版家族大乱斗)
+	FUN_TYPE_GUILD_ANSWER = 60,			//!< 家族答题
+	FUN_TYPE_COLLECTION_INCLUDED = 61,	//!< 收录
+	FUN_TYPE_GUILD_HONOR_BATTLE = 62,	//!< 家族荣耀战
+	FUN_TYPE_HUANJIEZHANCHANG = 63,		//!< 幻界战场
+	FUN_TYPE_PATROLTASK = 64,			//!< 巡逻任务
+	FUN_TYPE_SHAN_HAI_BOSS = 65,		//!< 山海降妖
+	FUN_TYPE_SHAN_MYSTERY_STORE = 66,	//!< 神秘商店（命格商店）
+	FUN_TYPE_GIVE_SECRET_KEY = 67,		//!< 赠寻宝次数
+	FUN_TYPE_CUMULATIVE_CHARGE = 68,	//!< 累计充值活动
+	FUN_TYPE_LEVEL_COMPLEMENT = 69,		//!< 等级助力
+	FUN_TYPE_PET_LOOT = 70,				//!< 宠物夺宝
+	FUN_TYPE_SMART_MOUNTS_SYSTEM = 71,	//!< 灵骑系统
+	FUN_TYPE_REALM_BREAK = 72,			//!< 境界系统
+	FUN_TYPE_MATERIAL = 73,				//!< 玉虚境(材料副本)
+	FUN_TYPE_LUN_HUI_WANG_CHUAN = 74,	//!< 轮回忘川
+	FUN_TYPE_CLOUD_ARENA = 75,			//!< 云端竞技
+	FUN_TYPE_HEART_SKILL = 76,			//!< 心法
+	FUN_TYPE_PET_GOD_FB = 77,			//!< 神印之地
+	FUN_TYPE_NETHER_WORLD_PURGATORY = 78,//!< 幽冥炼狱
+	FUN_TYPE_NETHER_WISH_GOD_PRINT = 79,//!< 祈神
+	FUN_TYPE_NETHER_GOD_PRINT_SYSTEM = 80,//!< 神印系统
+	FUN_TYPE_HUNDRED_GHOST = 81,		//!< 百鬼夜行
+	FUN_TYPE_BIG_DIPPER = 82,			//!< 北斗七星
+	FUN_TYPE_DUEL = 83,					//!< 决斗
+	FUN_TYPE_PARTNER_PACT = 84,			//!< 伙伴--元神契约
+	FUN_TYPE_TIAN_DI_DAO_HEN = 85,		//!< 天地道痕
+	FUN_TYPE_DU_JIE = 86,				//!< 渡劫
+	FUN_TYPE_PET_BENEDICTION = 87,		//!< 宠物祝福
+	FUN_TYPE_YIN_YANG_EYE = 88,			//!< 阴阳眼
+	FUN_TYPE_PEISHI = 89,				//!< 配饰
+	FUN_TYPE_DOUBLE_SPEED_ANIMATION = 90, //!< 二倍速
+	FUN_TYPE_ENDLESS_TOWER = 91,		//!< 无尽之塔
+	FUN_TYPE_DAY_FOOD = 92,				//!< 午餐晚餐
+	FUN_TYPE_COW_REPORT_GOOD_NEWS = 93,	  //!< 福牛报喜
+	FUN_TYPE_MIRAGE_TERRITORY = 94,		//!< 琉璃蜃境
+	FUN_TYPE_FLY_UP = 95,				//!< 飞升
+	FUN_TYPE_SILK_ROADS = 96,			//!< 丝绸之路(限时活动)
+	FUN_TYPE_TIGER_BRINGS_BLESSING = 97,  //!< 寅虎纳福
+	
+	FUN_TYPE_RA_RIBG_LIAN_YOU_LI = 98,	//!< 熔炼有礼
+	FUN_TYPE_FALLEN_GOD = 99,			//!< 殒神之地
+	FUN_TYPE_RA_JING_JI_YUE_KA = 100,	//!< 竞技月卡
+	FUN_TYPE_WORLD_TEAM_ARENA = 101,	//!< 英雄会武
+	FUN_TYPE_NEW_LEVEL_COMPLEMENT = 102,//!< 新等级助力
+	FUN_TYPE_QING_YUAN_SHENG_HUI = 103,	//!< 情缘盛会
+	FUN_TYPE_YAO_XING_SHI_LIAN = 104,	//!< 妖行试炼
+	FUN_TYPE_ZHOU_QI = 105,				//!< 周期活动
+	FUN_TYPE_JIUZHOU_MIBAO = 106,		//!< 九州秘宝
+	FUN_TYPE_GOD_BEAST_ADVENT= 107,		//!< 异兽临世
+	FUN_TYPE_YUAN_QI_HELP = 108,		//!< 元气助人
+	FUN_TYPE_SHENG_QI = 109,			//!< 圣器
+	FUN_TYPE_ZAO_HUA = 110,				//!< 造化装备
+	FUN_TYPE_WAN_LING_FB = 111,			//!< 万灵话本
+	FUN_TYPE_FU_YU = 112,				//!< 符玉
+
+	FUN_TYPE_WORLD_BOSS_3 = 113,		//!< 世界boss3（天神降临）
+	FUN_TYPE_STAR_CHART = 114,			//!< 星图
+	FUN_TYPE_NEW_COURAGE_CHALLENGE = 115,//!< 弑神之塔
+	FUN_TYPE_ROLE_HUAN_SHOU = 116,		//!< 幻兽系统
+	FUN_TYPE_ATTR_PELLET = 117,			//!< 属性丹
+
+	FUN_TYPE_MAX
+};
+
+#endif
